@@ -1942,7 +1942,9 @@ tbody tr.selected {
 
 .inspector-grid,
 .decision-table,
-.drawer-evidence-table {
+.drawer-evidence-table,
+.drawer-repo-impact-table,
+.action-queue {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 7px;
@@ -1976,7 +1978,8 @@ tbody tr.selected {
 }
 
 .decision-row,
-.drawer-evidence-row {
+.drawer-evidence-row,
+.drawer-repo-impact-row {
   display: grid;
   gap: 8px;
   align-items: center;
@@ -1992,13 +1995,20 @@ tbody tr.selected {
   grid-template-columns: minmax(0, 1.15fr) minmax(96px, 0.58fr) minmax(145px, 0.82fr) 52px 52px;
 }
 
+.drawer-repo-impact-row {
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.82fr) 72px;
+}
+
 .decision-row:last-child,
-.drawer-evidence-row:last-child {
+.drawer-evidence-row:last-child,
+.drawer-repo-impact-row:last-child,
+.action-queue-item:last-child {
   border-bottom: 0;
 }
 
 .decision-head,
-.drawer-evidence-head {
+.drawer-evidence-head,
+.drawer-repo-impact-head {
   background: #fbfdfe;
   color: var(--quiet);
   font-family: var(--mono);
@@ -2040,6 +2050,47 @@ tbody tr.selected {
   font-family: var(--sans);
   font-size: 12px;
   font-weight: 700;
+}
+
+.drawer-repo-impact-row span,
+.action-queue-item span {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.drawer-repo-impact-row span:first-child {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.action-queue {
+  display: grid;
+}
+
+.action-queue-item {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.action-queue-item:hover {
+  background: #fbfdfd;
+}
+
+.action-queue-item strong {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .repo-inline-link {
@@ -2391,6 +2442,14 @@ tbody tr.selected {
 
   .drawer-evidence-row span:nth-child(2),
   .drawer-evidence-row span:nth-child(5) {
+    display: none;
+  }
+
+  .drawer-repo-impact-row {
+    grid-template-columns: minmax(0, 1fr) 72px;
+  }
+
+  .drawer-repo-impact-row span:nth-child(2) {
     display: none;
   }
 

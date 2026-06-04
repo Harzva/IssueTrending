@@ -583,6 +583,10 @@ function githubIssueUrl(issue) {
   return `${githubRepoUrl(issue.repo)}/issues?q=${query}`;
 }
 
+function githubRepoIssueSearchUrl(repo, query) {
+  return `${githubRepoUrl(repo)}/issues?q=${encodeURIComponent(`is:issue is:open ${query}`)}`;
+}
+
 function githubReleaseUrl(repo, tag) {
   return `${githubRepoUrl(repo)}/releases/tag/${encodeURIComponent(tag)}`;
 }
@@ -1197,6 +1201,11 @@ function openDrawer(id) {
   if (!item) return;
 
   const repoTotals = aggregateRepoMetrics(item.repos);
+  const repoRows = item.repos
+    .map((repo) => ({ repo, metrics: getRepoMetrics(repo), evidenceCount: item.evidence.filter((issue) => issue.repo === repo).length }))
+    .sort((a, b) => b.evidenceCount - a.evidenceCount || b.metrics.stars - a.metrics.stars)
+    .slice(0, 8);
+  const topRepo = repoRows[0]?.repo || item.repos[0];
 
   state.selectedId = id;
   renderPainTable();
@@ -1235,6 +1244,8 @@ function openDrawer(id) {
       <a class="drawer-action" href="#opportunities">Open opportunity</a>
       <a class="drawer-action" href="#content">Open content angle</a>
       <a class="drawer-action" href="${escapeHtml(item.evidence[0] ? githubIssueUrl(item.evidence[0]) : "https://github.com/search")}" target="_blank" rel="noreferrer">View source issues</a>
+      <a class="drawer-action" href="${escapeHtml(githubRepoIssueSearchUrl(topRepo, item.title))}" target="_blank" rel="noreferrer">Search top repo</a>
+      <a class="drawer-action" href="${escapeHtml(githubRepoUrl(topRepo))}" target="_blank" rel="noreferrer">Open top repo</a>
     </div>
 
     <section class="drawer-section">
@@ -1247,6 +1258,28 @@ function openDrawer(id) {
         <span><strong>Repo stars</strong>${compactNumber(repoTotals.stars)}</span>
         <span><strong>Repo forks</strong>${compactNumber(repoTotals.forks)}</span>
         <span><strong>Contributors</strong>${compactNumber(repoTotals.contributors)}</span>
+      </div>
+    </section>
+
+    <section class="drawer-section">
+      <h3>Repository Impact</h3>
+      <div class="drawer-repo-impact-table">
+        <div class="drawer-repo-impact-row drawer-repo-impact-head">
+          <span>Repository</span>
+          <span>Signal</span>
+          <span>Evidence</span>
+        </div>
+        ${repoRows
+          .map(
+            ({ repo, metrics, evidenceCount }) => `
+              <div class="drawer-repo-impact-row">
+                <span><a class="repo-inline-link" href="${escapeHtml(githubRepoUrl(repo))}" target="_blank" rel="noreferrer">${escapeHtml(repo)}</a></span>
+                <span>${compactNumber(metrics.stars)} stars · ${compactNumber(metrics.forks)} forks · ${compactNumber(metrics.contributors)} contributors</span>
+                <span><a class="repo-inline-link" href="${escapeHtml(githubRepoIssueSearchUrl(repo, item.title))}" target="_blank" rel="noreferrer">${evidenceCount || "search"} issues</a></span>
+              </div>
+            `,
+          )
+          .join("")}
       </div>
     </section>
 
@@ -1269,6 +1302,24 @@ function openDrawer(id) {
           <span>Content</span>
           <span>${escapeHtml(item.contentAngle)}</span>
         </div>
+      </div>
+    </section>
+
+    <section class="drawer-section">
+      <h3>Action Queue</h3>
+      <div class="action-queue">
+        <a class="action-queue-item" href="${escapeHtml(githubRepoIssueSearchUrl(topRepo, item.title))}" target="_blank" rel="noreferrer">
+          <strong>Validate pain</strong>
+          <span>Open issue search in ${escapeHtml(topRepo)} and compare newest discussions.</span>
+        </a>
+        <a class="action-queue-item" href="#opportunities">
+          <strong>Product opportunity</strong>
+          <span>${escapeHtml(item.opportunity)}</span>
+        </a>
+        <a class="action-queue-item" href="#content">
+          <strong>Content angle</strong>
+          <span>${escapeHtml(item.contentAngle)}</span>
+        </a>
       </div>
     </section>
 
