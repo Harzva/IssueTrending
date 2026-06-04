@@ -524,6 +524,15 @@ function renderPainTable(rows = getFilteredPainPoints()) {
           <td>
             <span class="pain-title">${escapeHtml(item.title)}</span>
             <span class="pain-summary">${escapeHtml(item.summary)}</span>
+            <span class="pain-repo-line">
+              ${item.repos
+                .slice(0, 2)
+                .map(
+                  (repo) =>
+                    `<a class="pain-repo-mini" href="${escapeHtml(githubRepoUrl(repo))}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()" title="${escapeHtml(renderRepoSignal(repo))}">${escapeHtml(repo)}</a>`,
+                )
+                .join("")}
+            </span>
           </td>
           <td><span class="tag">${escapeHtml(categoryLabels[item.category] ?? item.category)}</span></td>
           <td>

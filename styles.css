@@ -874,7 +874,7 @@ table {
 
 #pain-points th:nth-child(2),
 #pain-points td:nth-child(2) {
-  width: 31%;
+  width: 30%;
 }
 
 #pain-points th:nth-child(3),
@@ -884,14 +884,17 @@ table {
 
 #pain-points th:nth-child(4),
 #pain-points td:nth-child(4) {
-  width: 82px;
+  width: 76px;
 }
 
 #pain-points th:nth-child(5),
-#pain-points td:nth-child(5),
+#pain-points td:nth-child(5) {
+  width: 58px;
+}
+
 #pain-points th:nth-child(6),
 #pain-points td:nth-child(6) {
-  width: 64px;
+  width: 78px;
 }
 
 #pain-points th:nth-child(7),
@@ -1055,13 +1058,41 @@ tbody tr.selected {
 }
 
 .pain-summary {
-  display: block;
+  display: none;
   overflow: hidden;
   color: var(--muted);
   font-size: 11px;
   line-height: 1.35;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.pain-repo-line {
+  display: flex;
+  min-width: 0;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.pain-repo-mini {
+  min-width: 0;
+  max-width: 48%;
+  overflow: hidden;
+  padding: 1px 5px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--muted);
+  background: #fff;
+  font-family: var(--mono);
+  font-size: 9px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pain-repo-mini:hover {
+  border-color: var(--teal);
+  color: var(--teal-dark);
 }
 
 .tag {
@@ -1943,7 +1974,7 @@ tbody tr.selected {
 
 @media (max-width: 760px) {
   .main {
-    padding: 18px;
+    padding: 10px 12px 18px;
   }
 
   .globalbar,
@@ -1956,6 +1987,7 @@ tbody tr.selected {
 
   .globalbar {
     display: grid;
+    gap: 7px;
   }
 
   .toolbar {
@@ -1968,12 +2000,79 @@ tbody tr.selected {
   }
 
   .run-strip span {
-    width: 100%;
+    width: auto;
+    flex: 0 0 auto;
   }
 
   .section-tools {
     min-width: 0;
     justify-content: flex-start;
+  }
+
+  .run-strip,
+  .filter-row,
+  .result-meta {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .run-strip::-webkit-scrollbar,
+  .filter-row::-webkit-scrollbar,
+  .result-meta::-webkit-scrollbar,
+  .summary-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .run-strip {
+    margin: -1px 0 7px;
+    padding-bottom: 1px;
+  }
+
+  .section-head {
+    gap: 6px;
+    margin-bottom: 7px;
+  }
+
+  .section-tools {
+    display: grid;
+    gap: 5px;
+  }
+
+  .filter-row {
+    justify-content: flex-start;
+  }
+
+  .chip,
+  .result-meta span {
+    flex: 0 0 auto;
+  }
+
+  .cockpit-head {
+    gap: 7px;
+    margin-bottom: 8px;
+  }
+
+  .title-block {
+    min-width: 0;
+  }
+
+  .title-line {
+    gap: 8px;
+    min-height: 24px;
+  }
+
+  .pulse-mark {
+    width: 14px;
+    height: 14px;
+  }
+
+  h1 {
+    font-size: 19px;
+  }
+
+  .cockpit-head p {
+    display: none;
   }
 
   .panel.compact .section-head.tight {
@@ -1983,21 +2082,25 @@ tbody tr.selected {
   }
 
   .summary-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    overflow-x: auto;
+    border-radius: 7px;
   }
 
   .metric,
   .metric:first-child {
-    border-left: 0;
-    border-top: 1px solid var(--line);
-  }
-
-  .metric:nth-child(-n + 2) {
+    flex: 0 0 106px;
+    padding: 7px 8px;
     border-top: 0;
+    border-left: 1px solid var(--line);
   }
 
-  .metric:nth-child(even) {
-    border-left: 1px solid var(--line);
+  .metric:first-child {
+    border-left: 0;
+  }
+
+  .metric strong {
+    font-size: 16px;
   }
 
   .status-pill {
@@ -2057,7 +2160,14 @@ tbody tr.selected {
   }
 
   .sidebar {
-    padding: 14px;
+    padding: 10px 12px;
+  }
+
+  .brand-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    font-size: 12px;
   }
 
   .brand small,
@@ -2158,7 +2268,11 @@ tbody tr.selected {
   }
 
   .pain-summary {
-    font-size: 11px;
+    display: none;
+  }
+
+  .pain-repo-line {
+    display: none;
   }
 
   .signal {
