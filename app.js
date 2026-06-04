@@ -529,6 +529,9 @@ function renderPainTable(rows = getFilteredPainPoints()) {
           <td>
             <span class="pain-title">${escapeHtml(item.title)}</span>
             <span class="pain-summary">${escapeHtml(item.summary)}</span>
+            <span class="pain-mobile-meta">
+              ${escapeHtml(categoryLabels[item.category] ?? item.category)} · ${item.openDays}d open · ${item.repos.length} repos · ${item.evidence.length} issues
+            </span>
             <span class="pain-repo-line">
               ${item.repos
                 .slice(0, 2)

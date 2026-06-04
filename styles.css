@@ -1105,6 +1105,10 @@ tbody tr.selected {
   white-space: nowrap;
 }
 
+.pain-mobile-meta {
+  display: none;
+}
+
 .pain-repo-line {
   display: flex;
   min-width: 0;
@@ -2311,6 +2315,18 @@ tbody tr.selected {
 
   .pain-summary {
     display: none;
+  }
+
+  .pain-mobile-meta {
+    display: block;
+    overflow: hidden;
+    margin-top: 2px;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 9px;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .pain-repo-line {
