@@ -591,6 +591,47 @@ function githubReleaseUrl(repo, tag) {
   return `${githubRepoUrl(repo)}/releases/tag/${encodeURIComponent(tag)}`;
 }
 
+function buildClusterBrief(item) {
+  const repoLines = item.repos.map((repo) => `- ${repo}: ${githubRepoUrl(repo)}`);
+  const issueLines = item.evidence.map((issue) => `- ${issue.title} (${issue.repo}) ${githubIssueUrl(issue)}`);
+  return [
+    `# ${item.title}`,
+    "",
+    `Category: ${categoryLabels[item.category] ?? item.category}`,
+    `Pain score: ${item.score}`,
+    `Signal: ${item.comments} comments / ${item.reactions} reactions / ${item.openDays} open days / ${item.repos.length} repos`,
+    "",
+    "## Real Need",
+    item.realNeed,
+    "",
+    "## Product Opportunity",
+    item.opportunity,
+    "",
+    "## Content Angle",
+    item.contentAngle,
+    "",
+    "## Repositories",
+    ...repoLines,
+    "",
+    "## Evidence Issues",
+    ...issueLines,
+  ].join("\n");
+}
+
+async function copyClusterBrief(button, item) {
+  const brief = buildClusterBrief(item);
+  try {
+    await navigator.clipboard.writeText(brief);
+    button.textContent = "Copied brief";
+  } catch {
+    window.prompt("Copy evidence brief", brief);
+    button.textContent = "Copy manually";
+  }
+  setTimeout(() => {
+    button.textContent = "Copy brief";
+  }, 1800);
+}
+
 function getFilteredPainPoints() {
   const query = state.search.trim().toLowerCase();
 
@@ -1206,6 +1247,7 @@ function openDrawer(id) {
     .sort((a, b) => b.evidenceCount - a.evidenceCount || b.metrics.stars - a.metrics.stars)
     .slice(0, 8);
   const topRepo = repoRows[0]?.repo || item.repos[0];
+  const briefPreview = buildClusterBrief(item).split("\n").slice(0, 13).join("\n");
 
   state.selectedId = id;
   renderPainTable();
@@ -1246,6 +1288,7 @@ function openDrawer(id) {
       <a class="drawer-action" href="${escapeHtml(item.evidence[0] ? githubIssueUrl(item.evidence[0]) : "https://github.com/search")}" target="_blank" rel="noreferrer">View source issues</a>
       <a class="drawer-action" href="${escapeHtml(githubRepoIssueSearchUrl(topRepo, item.title))}" target="_blank" rel="noreferrer">Search top repo</a>
       <a class="drawer-action" href="${escapeHtml(githubRepoUrl(topRepo))}" target="_blank" rel="noreferrer">Open top repo</a>
+      <button class="drawer-action" type="button" id="copyBriefButton">Copy brief</button>
     </div>
 
     <section class="drawer-section">
@@ -1258,6 +1301,13 @@ function openDrawer(id) {
         <span><strong>Repo stars</strong>${compactNumber(repoTotals.stars)}</span>
         <span><strong>Repo forks</strong>${compactNumber(repoTotals.forks)}</span>
         <span><strong>Contributors</strong>${compactNumber(repoTotals.contributors)}</span>
+      </div>
+    </section>
+
+    <section class="drawer-section">
+      <h3>Evidence Brief</h3>
+      <div class="brief-card">
+        <pre>${escapeHtml(briefPreview)}</pre>
       </div>
     </section>
 
@@ -1352,6 +1402,9 @@ function openDrawer(id) {
 
   selectors.drawer.hidden = false;
   selectors.drawerBackdrop.hidden = false;
+  document.querySelector("#copyBriefButton")?.addEventListener("click", (event) => {
+    copyClusterBrief(event.currentTarget, item);
+  });
   requestAnimationFrame(() => {
     selectors.drawer.classList.add("open");
     selectors.drawer.setAttribute("aria-hidden", "false");
