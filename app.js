@@ -401,6 +401,10 @@ function renderRepoImpact(repos) {
   return `${compactNumber(totals.stars)} stars`;
 }
 
+function githubRepoUrl(repo) {
+  return `https://github.com/${repo}`;
+}
+
 function getFilteredPainPoints() {
   const query = state.search.trim().toLowerCase();
 
@@ -737,10 +741,10 @@ function renderEvidenceTable(rows = getFilteredPainPoints()) {
         (issue) => `
           <div class="data-row evidence-row">
             <a href="${escapeHtml(issue.url)}" target="_blank" rel="noreferrer">${escapeHtml(issue.title)}</a>
-            <span class="repo-stack">
+            <a class="repo-stack repo-link" href="${escapeHtml(githubRepoUrl(issue.repo))}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
               <strong>${escapeHtml(issue.repo)}</strong>
               <small>${escapeHtml(issue.created)}</small>
-            </span>
+            </a>
             <span class="repo-signal" title="${escapeHtml(issue.repoSignal)}">${escapeHtml(issue.repoSignal)}</span>
             <span class="evidence-meta">${issue.comments}</span>
             <span class="evidence-meta">${issue.reactions}</span>
@@ -772,10 +776,10 @@ function renderRepoTable(rows = getFilteredPainPoints()) {
       .map(
         (repo) => `
           <div class="data-row repo-row">
-            <span class="repo-stack">
+            <a class="repo-stack repo-link" href="${escapeHtml(githubRepoUrl(repo.repo))}" target="_blank" rel="noreferrer">
               <strong>${escapeHtml(repo.repo)}</strong>
               <small>${repo.clusters} clusters / score ${repo.score}</small>
-            </span>
+            </a>
             <span class="repo-signal" title="${escapeHtml(renderRepoSignal(repo.repo))}">${escapeHtml(renderRepoSignal(repo.repo))}</span>
           </div>
         `,
@@ -869,7 +873,7 @@ function openDrawer(id) {
     <span class="drawer-kicker">Selected pain cluster</span>
     <h2>${escapeHtml(item.title)}</h2>
     <div class="repo-list">
-      ${item.repos.map((repo) => `<span class="repo-pill">${escapeHtml(repo)}</span>`).join("")}
+      ${item.repos.map((repo) => `<a class="repo-pill" href="${escapeHtml(githubRepoUrl(repo))}" target="_blank" rel="noreferrer">${escapeHtml(repo)}</a>`).join("")}
     </div>
 
     <div class="drawer-metrics" aria-label="Cluster metrics">
@@ -949,13 +953,13 @@ function openDrawer(id) {
         ${item.evidence
           .map(
             (issue) => `
-              <a class="drawer-evidence-row" href="${escapeHtml(issue.url)}" target="_blank" rel="noreferrer">
-                <span>${escapeHtml(issue.title)}</span>
-                <span>${escapeHtml(issue.repo)}</span>
+              <div class="drawer-evidence-row">
+                <span><a class="drawer-issue-link" href="${escapeHtml(issue.url)}" target="_blank" rel="noreferrer">${escapeHtml(issue.title)}</a></span>
+                <span><a class="repo-inline-link" href="${escapeHtml(githubRepoUrl(issue.repo))}" target="_blank" rel="noreferrer">${escapeHtml(issue.repo)}</a></span>
                 <span title="${escapeHtml(renderRepoSignal(issue.repo))}">${escapeHtml(renderRepoSignal(issue.repo))}</span>
                 <span>${issue.comments}</span>
                 <span>${issue.reactions}</span>
-              </a>
+              </div>
             `,
           )
           .join("")}

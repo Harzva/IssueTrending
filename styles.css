@@ -1157,6 +1157,13 @@ tbody tr.selected {
   background: #fff;
 }
 
+.repo-pill:hover,
+.repo-link:hover strong,
+.repo-inline-link:hover,
+.drawer-issue-link:hover {
+  color: var(--teal-dark);
+}
+
 .subsurface-grid {
   display: grid;
   grid-template-columns: minmax(500px, 1.38fr) minmax(230px, 0.62fr);
@@ -1247,6 +1254,10 @@ tbody tr.selected {
   min-width: 0;
   display: grid;
   gap: 2px;
+}
+
+.repo-link {
+  color: inherit;
 }
 
 .repo-stack strong,
@@ -1875,6 +1886,27 @@ tbody tr.selected {
   font-family: var(--sans);
   font-size: 12px;
   font-weight: 700;
+}
+
+.repo-inline-link {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  color: inherit;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.drawer-issue-link {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  color: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media (max-width: 1120px) {
