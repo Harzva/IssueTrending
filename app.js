@@ -433,6 +433,7 @@ function getSortValue(item, key) {
     title: item.title,
     issues: item.evidence.length,
     repos: item.repos.length,
+    openDays: item.openDays,
     comments: item.comments,
     reactions: item.reactions,
     score: item.score,
@@ -539,11 +540,7 @@ function renderPainTable(rows = getFilteredPainPoints()) {
             </span>
           </td>
           <td><span class="tag">${escapeHtml(categoryLabels[item.category] ?? item.category)}</span></td>
-          <td>
-            <span class="sparkline" aria-label="7 day trend">
-              ${renderSparkline(index + timeframeConfig[state.timeframe].sparkOffset)}
-            </span>
-          </td>
+          <td><span class="num-cell">${item.openDays}</span><small class="repo-impact">open</small></td>
           <td><span class="num-cell">${Math.round(item.evidence.length * timeframeConfig[state.timeframe].issueScale)}</span><small class="delta">+${scaledDelta(item.evidence.length * 18)}%</small></td>
           <td><span class="num-cell">${item.repos.length}</span><small class="repo-impact">${escapeHtml(renderRepoImpact(item.repos))}</small></td>
           <td><span class="num-cell">${item.comments}</span><small class="delta">+${scaledDelta(item.comments / 12)}%</small></td>
