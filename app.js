@@ -642,9 +642,7 @@ function renderMiniList(container, items, metricLabel = "Score") {
             <span class="rail-main">
               <strong>${escapeHtml(item.title)}</strong>
               <small>${escapeHtml(item.body)}</small>
-              <span class="rail-meta">
-                ${item.meta.map((meta) => `<span>${escapeHtml(meta)}</span>`).join("")}
-              </span>
+              <span class="rail-meta">${escapeHtml(item.meta.join(" · "))}</span>
             </span>
             <span class="rail-rank ${item.level === "High" ? "high" : "med"}">${escapeHtml(item.level)}<br />${item.score}</span>
           </div>
