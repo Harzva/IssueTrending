@@ -1,6 +1,7 @@
 *.png
 !issuetrending-cockpit-v25-rank-badges-desktop.png
 !issuetrending-cockpit-v25-rank-badges-mobile.png
+!docs/readme-assets/*.png
 .DS_Store
 Thumbs.db
 node_modules/

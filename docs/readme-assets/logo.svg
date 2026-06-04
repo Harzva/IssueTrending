@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">IssueTrending logo</title>
+  <desc id="desc">A compact dashboard mark combining issue signals, ranking, and repository intelligence.</desc>
+  <rect width="240" height="240" rx="48" fill="#14212b"/>
+  <rect x="48" y="50" width="144" height="140" rx="18" fill="#ffffff"/>
+  <rect x="66" y="72" width="108" height="12" rx="6" fill="#dfe7ed"/>
+  <rect x="66" y="100" width="74" height="12" rx="6" fill="#dfe7ed"/>
+  <rect x="66" y="128" width="94" height="12" rx="6" fill="#dfe7ed"/>
+  <rect x="66" y="156" width="58" height="12" rx="6" fill="#dfe7ed"/>
+  <path d="M92 170 118 132 140 148 168 100" fill="none" stroke="#0f9f9a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="92" cy="170" r="10" fill="#0f9f9a"/>
+  <circle cx="118" cy="132" r="10" fill="#0f9f9a"/>
+  <circle cx="140" cy="148" r="10" fill="#0f9f9a"/>
+  <circle cx="168" cy="100" r="10" fill="#0f9f9a"/>
+</svg>
