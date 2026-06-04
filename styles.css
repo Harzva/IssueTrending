@@ -582,9 +582,19 @@ h3 {
   gap: 6px;
 }
 
+.star-button.active {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+}
+
 .star-button strong {
   color: var(--ink);
   font-weight: 750;
+}
+
+.star-button.active strong {
+  color: var(--teal-dark);
 }
 
 .button.ghost {
@@ -2298,6 +2308,10 @@ tbody tr.selected {
 
   .tool-button {
     display: none;
+  }
+
+  .tool-button.star-button {
+    display: inline-flex;
   }
 
   .run-strip span {

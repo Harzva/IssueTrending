@@ -1,4 +1,5 @@
 const TRACKED_STORAGE_KEY = "issuetrending.trackedIds.v1";
+const TRACKED_VIEW_STORAGE_KEY = "issuetrending.showTrackedOnly.v1";
 const defaultTrackedIds = ["agent-memory", "mcp-debugging"];
 
 function loadTrackedIds() {
@@ -18,6 +19,22 @@ function saveTrackedIds() {
   }
 }
 
+function loadTrackedView() {
+  try {
+    return localStorage.getItem(TRACKED_VIEW_STORAGE_KEY) === "true";
+  } catch {
+    return false;
+  }
+}
+
+function saveTrackedView() {
+  try {
+    localStorage.setItem(TRACKED_VIEW_STORAGE_KEY, String(state.showTrackedOnly));
+  } catch {
+    // View preference is progressive enhancement; the filter still works during the current session.
+  }
+}
+
 const state = {
   activeCategory: "all",
   search: "",
@@ -25,6 +42,7 @@ const state = {
   sortDirection: "desc",
   selectedId: null,
   trackedIds: new Set(loadTrackedIds()),
+  showTrackedOnly: loadTrackedView(),
   rankingOpen: false,
   timeframe: "7d",
   liveMode: "seed",
@@ -658,6 +676,7 @@ function getFilteredPainPoints() {
 
   const filtered = data.painPoints.filter((item) => {
     const categoryMatch = state.activeCategory === "all" || item.category === state.activeCategory;
+    const trackedMatch = !state.showTrackedOnly || state.trackedIds.has(item.id);
     const queryMatch =
       !query ||
       [item.title, item.summary, item.realNeed, item.opportunity, item.contentAngle, item.category, ...item.repos]
@@ -665,7 +684,7 @@ function getFilteredPainPoints() {
         .toLowerCase()
         .includes(query);
 
-    return categoryMatch && queryMatch;
+    return categoryMatch && trackedMatch && queryMatch;
   });
 
   return sortPainPoints(filtered);
@@ -846,6 +865,7 @@ function renderResultMeta(rows = getFilteredPainPoints()) {
 
   selectors.resultMeta.innerHTML = `
     <span><strong>Showing</strong>${rows.length} clusters</span>
+    <span><strong>View</strong>${state.showTrackedOnly ? "tracked" : "all"}</span>
     <span><strong>Window</strong>${config.label}</span>
     <span><strong>Evidence</strong>${Math.round(evidenceCount * config.issueScale)} issues</span>
     <span><strong>Repos</strong>${reposCount}</span>
@@ -860,10 +880,16 @@ function renderTrackedSummary() {
   if (!selectors.trackedSummary) return;
   const count = state.trackedIds.size;
   const total = data.painPoints.length;
-  const label = `${count} tracked pain clusters saved locally`;
+  const label = state.showTrackedOnly
+    ? `Showing ${count} tracked pain clusters`
+    : `${count} tracked pain clusters saved locally`;
   selectors.trackedSummary.querySelector("strong").textContent = count;
   selectors.trackedSummary.setAttribute("aria-label", label);
-  selectors.trackedSummary.title = `${label} / ${total} total`;
+  selectors.trackedSummary.setAttribute("aria-pressed", state.showTrackedOnly ? "true" : "false");
+  selectors.trackedSummary.classList.toggle("active", state.showTrackedOnly);
+  selectors.trackedSummary.title = state.showTrackedOnly
+    ? `${label} / click to show all ${total}`
+    : `${label} / click to show tracked only`;
 }
 
 function renderRankingPanel() {
@@ -1611,6 +1637,13 @@ function bindEvents() {
   selectors.drawerBackdrop.addEventListener("click", closeDrawer);
   selectors.refreshGithub.addEventListener("click", fetchGithubIssues);
   selectors.scanReleases.addEventListener("click", scanReleaseDownloads);
+  selectors.trackedSummary.addEventListener("click", () => {
+    state.showTrackedOnly = !state.showTrackedOnly;
+    state.releaseDownloads = [];
+    state.releaseMode = "seed";
+    saveTrackedView();
+    renderWorkspaceData();
+  });
   selectors.releaseScopeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       state.releaseScope = button.dataset.releaseScope;
