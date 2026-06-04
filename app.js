@@ -384,6 +384,11 @@ function renderRepoSignal(repo) {
   return `${compactNumber(metrics.stars)} stars / ${compactNumber(metrics.forks)} forks / ${compactNumber(metrics.contributors)} contributors`;
 }
 
+function renderRepoWeight(repos) {
+  const totals = aggregateRepoMetrics(repos);
+  return `${compactNumber(totals.stars)} S / ${compactNumber(totals.forks)} F / ${compactNumber(totals.contributors)} C`;
+}
+
 function aggregateRepoMetrics(repos) {
   return [...new Set(repos)].reduce(
     (totals, repo) => {
@@ -398,8 +403,7 @@ function aggregateRepoMetrics(repos) {
 }
 
 function renderRepoImpact(repos) {
-  const totals = aggregateRepoMetrics(repos);
-  return `${compactNumber(totals.stars)} stars`;
+  return renderRepoWeight(repos);
 }
 
 function githubRepoUrl(repo) {
