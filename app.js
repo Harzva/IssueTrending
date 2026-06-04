@@ -785,7 +785,10 @@ function renderPainTable(rows = getFilteredPainPoints()) {
     return;
   }
 
-  selectors.painTable.innerHTML = rows
+  const queueRow = state.showTrackedOnly && rows.length < 4 ? renderTrackedQueueRow(rows) : "";
+
+  selectors.painTable.innerHTML =
+    rows
     .map(
       (item, index) => `
         <tr data-id="${escapeHtml(item.id)}" tabindex="0" class="${state.selectedId === item.id ? "selected" : ""}">
@@ -824,7 +827,7 @@ function renderPainTable(rows = getFilteredPainPoints()) {
         </tr>
       `,
     )
-    .join("");
+      .join("") + queueRow;
 
   selectors.painTable.querySelectorAll(".track-button").forEach((button) => {
     button.addEventListener("click", (event) => {
@@ -840,6 +843,26 @@ function renderPainTable(rows = getFilteredPainPoints()) {
     });
   });
 
+  selectors.painTable.querySelectorAll("[data-pain-action]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const action = button.dataset.painAction;
+      if (action === "show-all") {
+        state.showTrackedOnly = false;
+        state.releaseDownloads = [];
+        state.releaseMode = "seed";
+        saveTrackedView();
+        renderWorkspaceData();
+      }
+      if (action === "scan-releases") {
+        scanReleaseDownloads();
+      }
+      if (action === "open-brief" && rows[0]) {
+        openDrawer(rows[0].id);
+      }
+    });
+  });
+
   selectors.painTable.querySelectorAll("tr[data-id]").forEach((row) => {
     row.addEventListener("click", () => openDrawer(row.dataset.id));
     row.addEventListener("keydown", (event) => {
@@ -849,6 +872,30 @@ function renderPainTable(rows = getFilteredPainPoints()) {
       }
     });
   });
+}
+
+function renderTrackedQueueRow(rows) {
+  const issueCount = rows.reduce((sum, item) => sum + item.evidence.length, 0);
+  const repoCount = new Set(rows.flatMap((item) => item.repos)).size;
+  const topItem = rows[0];
+
+  return `
+    <tr class="cockpit-fill-row">
+      <td colspan="10">
+        <div class="cockpit-fill">
+          <div>
+            <strong>Tracked queue ready</strong>
+            <span>${rows.length} clusters · ${issueCount} issues · ${repoCount} repos · next evidence review</span>
+          </div>
+          <div class="cockpit-fill-actions">
+            <button type="button" data-pain-action="open-brief" ${topItem ? "" : "disabled"}>Open top brief</button>
+            <button type="button" data-pain-action="scan-releases">Scan releases</button>
+            <button type="button" data-pain-action="show-all">Show all</button>
+          </div>
+        </div>
+      </td>
+    </tr>
+  `;
 }
 
 function scaledDelta(value) {

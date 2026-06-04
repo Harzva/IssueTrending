@@ -1061,6 +1061,78 @@ th {
   font-size: 12px;
 }
 
+.cockpit-fill-row {
+  cursor: default;
+}
+
+.cockpit-fill-row:hover {
+  background: transparent;
+}
+
+.cockpit-fill-row td {
+  padding: 10px 8px;
+  background: linear-gradient(180deg, #fbfdfe 0%, #fff 100%);
+}
+
+.cockpit-fill {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 10px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 7px;
+}
+
+.cockpit-fill strong,
+.cockpit-fill span {
+  display: block;
+}
+
+.cockpit-fill strong {
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.cockpit-fill span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+
+.cockpit-fill-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  min-width: 0;
+}
+
+.cockpit-fill-actions button {
+  height: 26px;
+  padding: 0 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--teal-dark);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.cockpit-fill-actions button:hover {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+.cockpit-fill-actions button:disabled {
+  color: var(--quiet);
+  cursor: not-allowed;
+}
+
 .sort-button {
   display: inline-flex;
   align-items: center;
@@ -2573,6 +2645,10 @@ tbody tr.selected {
     min-width: 100%;
   }
 
+  #pain-points table {
+    table-layout: auto;
+  }
+
   th,
   td {
     padding: 8px 6px;
@@ -2631,6 +2707,22 @@ tbody tr.selected {
   }
 
   .pain-repo-line {
+    display: none;
+  }
+
+  .cockpit-fill {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cockpit-fill-actions {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .cockpit-fill-actions::-webkit-scrollbar {
     display: none;
   }
 
