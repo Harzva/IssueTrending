@@ -2034,6 +2034,10 @@ tbody tr.selected {
     margin-bottom: 7px;
   }
 
+  .section-head p {
+    display: none;
+  }
+
   .section-tools {
     display: grid;
     gap: 5px;
@@ -2050,11 +2054,11 @@ tbody tr.selected {
 
   .cockpit-head {
     gap: 7px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .title-block {
-    min-width: 0;
+    display: none;
   }
 
   .title-line {
