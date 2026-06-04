@@ -8,6 +8,8 @@ const state = {
   rankingOpen: false,
   timeframe: "7d",
   liveMode: "seed",
+  releaseMode: "seed",
+  releaseDownloads: [],
 };
 
 const timeframeConfig = {
@@ -399,7 +401,92 @@ const repoMetrics = {
   "promptfoo/promptfoo": { stars: 21900, forks: 1900, contributors: 210 },
   "traceloop/openllmetry": { stars: 7200, forks: 980, contributors: 90 },
   "langwatch/langwatch": { stars: 3300, forks: 320, contributors: 55 },
+  "aquasecurity/trivy": { stars: 28800, forks: 2800, contributors: 620 },
+  "Open-LLM-VTuber/Open-LLM-VTuber": { stars: 7700, forks: 650, contributors: 80 },
+  "NousResearch/hermes-agent": { stars: 179800, forks: 30800, contributors: 120 },
+  "chopratejas/headroom": { stars: 1600, forks: 110, contributors: 22 },
+  "microsoft/markitdown": { stars: 74000, forks: 3900, contributors: 160 },
+  "D4Vinci/Scrapling": { stars: 9800, forks: 520, contributors: 35 },
+  "Gloridust/WechatOnCloud": { stars: 1200, forks: 110, contributors: 12 },
 };
+
+const releaseWatchRepos = [
+  "aquasecurity/trivy",
+  "Open-LLM-VTuber/Open-LLM-VTuber",
+  "NousResearch/hermes-agent",
+  "RooVetGit/Roo-Code",
+  "google-gemini/gemini-cli",
+  "chopratejas/headroom",
+  "microsoft/markitdown",
+  "D4Vinci/Scrapling",
+  "Gloridust/WechatOnCloud",
+  "browser-use/browser-use",
+  "microsoft/playwright",
+  "cline/cline",
+];
+
+const releaseDownloadSeed = [
+  {
+    repo: "aquasecurity/trivy",
+    tagName: "v0.71.0",
+    publishedAt: "2026-06-01",
+    totalDownloads: 185842,
+    assetCount: 47,
+    topAssetName: "trivy_0.71.0_Linux-64bit.tar.gz",
+    topAssetDownloads: 97116,
+    topAssetUrl: "https://github.com/aquasecurity/trivy/releases/download/v0.71.0/trivy_0.71.0_Linux-64bit.tar.gz",
+  },
+  {
+    repo: "Open-LLM-VTuber/Open-LLM-VTuber",
+    tagName: "v1.2.1",
+    publishedAt: "2025-08-26",
+    totalDownloads: 15889,
+    assetCount: 4,
+    topAssetName: "open-llm-vtuber-1.2.1-setup.exe",
+    topAssetDownloads: 7391,
+    topAssetUrl: "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber/releases/download/v1.2.1/open-llm-vtuber-1.2.1-setup.exe",
+  },
+  {
+    repo: "NousResearch/hermes-agent",
+    tagName: "v2026.5.29.2",
+    publishedAt: "2026-05-29",
+    totalDownloads: 8325,
+    assetCount: 2,
+    topAssetName: "hermes_agent-0.15.2-py3-none-any.whl",
+    topAssetDownloads: 4228,
+    topAssetUrl: "https://github.com/NousResearch/hermes-agent/releases/download/v2026.5.29.2/hermes_agent-0.15.2-py3-none-any.whl",
+  },
+  {
+    repo: "RooVetGit/Roo-Code",
+    tagName: "v3.54.0",
+    publishedAt: "2026-05-15",
+    totalDownloads: 862,
+    assetCount: 1,
+    topAssetName: "roo-cline-3.54.0.vsix",
+    topAssetDownloads: 862,
+    topAssetUrl: "https://github.com/RooCodeInc/Roo-Code/releases/download/v3.54.0/roo-cline-3.54.0.vsix",
+  },
+  {
+    repo: "google-gemini/gemini-cli",
+    tagName: "v0.45.0",
+    publishedAt: "2026-06-03",
+    totalDownloads: 187,
+    assetCount: 3,
+    topAssetName: "gemini-cli-bundle.zip",
+    topAssetDownloads: 112,
+    topAssetUrl: "https://github.com/google-gemini/gemini-cli/releases/download/v0.45.0/gemini-cli-bundle.zip",
+  },
+  {
+    repo: "chopratejas/headroom",
+    tagName: "v0.22.4",
+    publishedAt: "2026-06-01",
+    totalDownloads: 253,
+    assetCount: 15,
+    topAssetName: "headroom-ai-0.22.4.tgz",
+    topAssetDownloads: 54,
+    topAssetUrl: "https://github.com/chopratejas/headroom/releases/download/v0.22.4/headroom-ai-0.22.4.tgz",
+  },
+].sort((a, b) => b.totalDownloads - a.totalDownloads);
 
 const selectors = {
   painTable: document.querySelector("#painTable"),
@@ -426,6 +513,9 @@ const selectors = {
   resultMeta: document.querySelector("#resultMeta"),
   timeframeButtons: document.querySelectorAll(".timeframe-button"),
   compareButton: document.querySelector("#compareButton"),
+  scanReleases: document.querySelector("#scanReleases"),
+  releaseStatus: document.querySelector("#releaseStatus"),
+  releaseTable: document.querySelector("#releaseTable"),
 };
 
 function escapeHtml(value) {
@@ -483,6 +573,10 @@ function githubIssueUrl(issue) {
   if (directUrl && !/\/issues\/?$/.test(directUrl)) return directUrl;
   const query = encodeURIComponent(`is:issue ${issue.title}`);
   return `${githubRepoUrl(issue.repo)}/issues?q=${query}`;
+}
+
+function githubReleaseUrl(repo, tag) {
+  return `${githubRepoUrl(repo)}/releases/tag/${encodeURIComponent(tag)}`;
 }
 
 function getFilteredPainPoints() {
@@ -875,6 +969,110 @@ function renderRepoTable(rows = getFilteredPainPoints()) {
   `;
 }
 
+function candidateReposForReleaseScan(rows = getFilteredPainPoints()) {
+  return [...new Set([...releaseWatchRepos, ...rows.flatMap((item) => item.repos)])].slice(0, 24);
+}
+
+function renderReleaseTable(items = state.releaseDownloads.length ? state.releaseDownloads : releaseDownloadSeed) {
+  selectors.releaseTable.innerHTML = `
+    <div class="data-row release-row data-head">
+      <span>Repository</span>
+      <span>Release</span>
+      <span>Downloads</span>
+      <span>Top asset</span>
+      <span>Published</span>
+    </div>
+    ${items
+      .map(
+        (item) => `
+          <div class="data-row release-row">
+            <a class="repo-stack repo-link" href="${escapeHtml(githubRepoUrl(item.repo))}" target="_blank" rel="noreferrer">
+              <strong>${escapeHtml(item.repo)}</strong>
+              <small>${escapeHtml(renderRepoSignal(item.repo))}</small>
+            </a>
+            <a class="repo-inline-link" href="${escapeHtml(githubReleaseUrl(item.repo, item.tagName))}" target="_blank" rel="noreferrer">
+              ${escapeHtml(item.tagName)}
+            </a>
+            <span class="num-cell">${compactNumber(item.totalDownloads)}</span>
+            <a class="repo-inline-link" href="${escapeHtml(item.topAssetUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(item.topAssetName)}">
+              ${escapeHtml(item.topAssetName)} · ${compactNumber(item.topAssetDownloads)}
+            </a>
+            <span class="evidence-meta">${escapeHtml(item.publishedAt)}</span>
+          </div>
+        `,
+      )
+      .join("")}
+    ${
+      items.length
+        ? ""
+        : `<div class="empty-state">
+            <strong>No release asset downloads scanned</strong>
+            <span>Click Scan releases to rank current repos by uploaded asset download_count.</span>
+          </div>`
+    }
+  `;
+}
+
+async function fetchRepoLatestReleaseDownloads(repo) {
+  const response = await fetch(`https://api.github.com/repos/${repo}/releases/latest`, {
+    headers: { Accept: "application/vnd.github+json" },
+  });
+
+  if (!response.ok) {
+    throw new Error(`${repo} release ${response.status}`);
+  }
+
+  const release = await response.json();
+  const assets = release.assets ?? [];
+  if (!assets.length) return null;
+
+  const totalDownloads = assets.reduce((sum, asset) => sum + (asset.download_count ?? 0), 0);
+  const topAsset = [...assets].sort((a, b) => (b.download_count ?? 0) - (a.download_count ?? 0))[0];
+
+  return {
+    repo,
+    tagName: release.tag_name,
+    releaseName: release.name || release.tag_name,
+    publishedAt: release.published_at ? new Date(release.published_at).toLocaleDateString("zh-CN") : "unknown",
+    totalDownloads,
+    assetCount: assets.length,
+    topAssetName: topAsset?.name ?? "asset",
+    topAssetDownloads: topAsset?.download_count ?? 0,
+    topAssetUrl: topAsset?.browser_download_url ?? githubReleaseUrl(repo, release.tag_name),
+  };
+}
+
+async function scanReleaseDownloads() {
+  const repos = candidateReposForReleaseScan();
+  selectors.scanReleases.disabled = true;
+  selectors.scanReleases.textContent = "Scanning...";
+  selectors.releaseStatus.textContent = `Scanning ${repos.length} repos; no-assets repos are filtered out.`;
+
+  const results = await Promise.allSettled(repos.map((repo) => fetchRepoLatestReleaseDownloads(repo)));
+  const failures = results.filter((result) => result.status === "rejected").length;
+  const downloads = results
+    .filter((result) => result.status === "fulfilled" && result.value)
+    .map((result) => result.value)
+    .sort((a, b) => b.totalDownloads - a.totalDownloads)
+    .slice(0, 10);
+  const skipped = results.length - downloads.length;
+
+  state.releaseMode = "live";
+  if (downloads.length) {
+    state.releaseDownloads = downloads;
+    selectors.releaseStatus.textContent = `Latest release assets only · ${downloads.length} ranked · ${skipped} skipped`;
+    renderReleaseTable(downloads);
+  } else {
+    state.releaseDownloads = [];
+    selectors.releaseStatus.textContent = failures
+      ? `GitHub API rate-limited or unavailable · showing cached release asset ranking`
+      : `No uploaded release assets found in ${repos.length} scanned repos · showing cached ranking`;
+    renderReleaseTable(releaseDownloadSeed);
+  }
+  selectors.scanReleases.disabled = false;
+  selectors.scanReleases.textContent = "Scan releases";
+}
+
 function renderTopicCloud(rows = getFilteredPainPoints()) {
   const topics = collectTopics(rows);
 
@@ -1216,6 +1414,7 @@ function bindEvents() {
   selectors.closeDrawer.addEventListener("click", closeDrawer);
   selectors.drawerBackdrop.addEventListener("click", closeDrawer);
   selectors.refreshGithub.addEventListener("click", fetchGithubIssues);
+  selectors.scanReleases.addEventListener("click", scanReleaseDownloads);
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeDrawer();
@@ -1242,6 +1441,7 @@ function renderWorkspaceData() {
   renderEvidenceTable(rows);
   renderRepoTable(rows);
   renderTopicCloud(rows);
+  renderReleaseTable();
   if (state.liveMode === "seed") {
     renderDefaultLiveResults(rows);
   }

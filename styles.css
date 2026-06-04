@@ -1240,6 +1240,10 @@ tbody tr.selected {
   background: #fff;
 }
 
+.release-hot {
+  margin-top: 10px;
+}
+
 .subsurface-head {
   display: flex;
   align-items: center;
@@ -1280,6 +1284,10 @@ tbody tr.selected {
 .repo-row {
   grid-template-columns: minmax(0, 1fr);
   gap: 2px;
+}
+
+.release-row {
+  grid-template-columns: minmax(150px, 0.95fr) minmax(70px, 0.36fr) 78px minmax(170px, 0.95fr) 74px;
 }
 
 .data-head {
@@ -2163,6 +2171,16 @@ tbody tr.selected {
 
   .repo-row .repo-signal {
     white-space: normal;
+  }
+
+  .release-row {
+    grid-template-columns: minmax(0, 1fr) 58px minmax(96px, 0.8fr);
+  }
+
+  .release-row > span:nth-child(2),
+  .release-row > a:nth-child(2),
+  .release-row > span:nth-child(5) {
+    display: none;
   }
 
   .signal-row {
