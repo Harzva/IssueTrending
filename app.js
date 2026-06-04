@@ -7,6 +7,7 @@ const state = {
   trackedIds: new Set(["agent-memory", "mcp-debugging"]),
   rankingOpen: false,
   timeframe: "7d",
+  liveMode: "seed",
 };
 
 const timeframeConfig = {
@@ -1008,6 +1009,7 @@ async function fetchGithubIssues() {
     const items = payload.items ?? [];
     const repoSignals = await fetchLiveRepoSignals(items);
 
+    state.liveMode = "live";
     selectors.liveStatus.textContent = `抓取完成：找到 ${payload.total_count.toLocaleString()} 条匹配 open issues，展示前 ${items.length} 条。`;
     selectors.liveCount.textContent = items.length;
     selectors.liveResults.innerHTML = `
@@ -1034,8 +1036,9 @@ async function fetchGithubIssues() {
         .join("")}
     `;
   } catch (error) {
+    state.liveMode = "seed";
     selectors.liveStatus.textContent = `GitHub 抓取失败：${error.message}。页面仍可使用内置演示数据。`;
-    renderDefaultLiveResults();
+    renderDefaultLiveResults(getFilteredPainPoints());
   } finally {
     selectors.refreshGithub.disabled = false;
     selectors.refreshGithub.textContent = "抓取 GitHub";
@@ -1063,8 +1066,8 @@ async function fetchLiveRepoSignals(items) {
   return new Map(results.filter((result) => result.status === "fulfilled").map((result) => result.value));
 }
 
-function renderDefaultLiveResults() {
-  const issues = collectEvidenceIssues(data.painPoints);
+function renderDefaultLiveResults(rows = getFilteredPainPoints()) {
+  const issues = collectEvidenceIssues(rows);
 
   selectors.liveResults.innerHTML = `
     <div class="data-row live-row data-head">
@@ -1087,6 +1090,14 @@ function renderDefaultLiveResults() {
         `,
       )
       .join("")}
+    ${
+      issues.length
+        ? ""
+        : `<div class="empty-state">
+            <strong>No seed issues</strong>
+            <span>Current filters have no evidence rows to preview.</span>
+          </div>`
+    }
   `;
 }
 
@@ -1144,7 +1155,6 @@ function render() {
   renderMiniList(selectors.contentList, data.contentAngles, "Potential");
   renderSignals();
   renderRailSignals();
-  renderDefaultLiveResults();
 }
 
 function renderWorkspaceData() {
@@ -1154,6 +1164,9 @@ function renderWorkspaceData() {
   renderEvidenceTable(rows);
   renderRepoTable(rows);
   renderTopicCloud(rows);
+  if (state.liveMode === "seed") {
+    renderDefaultLiveResults(rows);
+  }
 }
 
 bindEvents();
