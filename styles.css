@@ -1112,13 +1112,14 @@ tbody tr.selected {
 .pain-repo-line {
   display: flex;
   min-width: 0;
+  flex-wrap: wrap;
   gap: 4px;
   margin-top: 4px;
 }
 
 .pain-repo-mini {
   min-width: 0;
-  max-width: 48%;
+  max-width: 31%;
   overflow: hidden;
   padding: 1px 5px;
   border: 1px solid var(--line);
@@ -1130,6 +1131,11 @@ tbody tr.selected {
   line-height: 1.35;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.pain-repo-mini.repo-more {
+  color: var(--teal-dark);
+  font-weight: 750;
 }
 
 .pain-repo-mini:hover {

@@ -41,7 +41,15 @@ const data = {
       comments: 418,
       reactions: 126,
       openDays: 73,
-      repos: ["langchain-ai/langchain", "crewAIInc/crewAI", "microsoft/autogen"],
+      repos: [
+        "langchain-ai/langchain",
+        "crewAIInc/crewAI",
+        "microsoft/autogen",
+        "mem0ai/mem0",
+        "getzep/zep",
+        "langchain-ai/langgraph",
+        "Significant-Gravitas/AutoGPT",
+      ],
       language: "TypeScript",
       evidence: [
         {
@@ -74,7 +82,14 @@ const data = {
       comments: 362,
       reactions: 118,
       openDays: 41,
-      repos: ["modelcontextprotocol/servers", "modelcontextprotocol/inspector", "browser-use/browser-use"],
+      repos: [
+        "modelcontextprotocol/servers",
+        "modelcontextprotocol/inspector",
+        "browser-use/browser-use",
+        "modelcontextprotocol/typescript-sdk",
+        "modelcontextprotocol/python-sdk",
+        "punkpeye/awesome-mcp-servers",
+      ],
       language: "TypeScript",
       evidence: [
         {
@@ -107,7 +122,15 @@ const data = {
       comments: 304,
       reactions: 102,
       openDays: 96,
-      repos: ["run-llama/llama_index", "langchain-ai/langchain", "explodinggradients/ragas"],
+      repos: [
+        "run-llama/llama_index",
+        "langchain-ai/langchain",
+        "explodinggradients/ragas",
+        "deepset-ai/haystack",
+        "chroma-core/chroma",
+        "qdrant/qdrant",
+        "weaviate/weaviate",
+      ],
       language: "Python",
       evidence: [
         {
@@ -140,7 +163,14 @@ const data = {
       comments: 287,
       reactions: 74,
       openDays: 58,
-      repos: ["browser-use/browser-use", "microsoft/playwright", "Skyvern-AI/skyvern"],
+      repos: [
+        "browser-use/browser-use",
+        "microsoft/playwright",
+        "Skyvern-AI/skyvern",
+        "microsoft/playwright-mcp",
+        "browserbase/stagehand",
+        "browserbase/mcp-server-browserbase",
+      ],
       language: "Python",
       evidence: [
         {
@@ -173,7 +203,15 @@ const data = {
       comments: 244,
       reactions: 69,
       openDays: 37,
-      repos: ["openai/codex", "continuedev/continue", "aider-ai/aider"],
+      repos: [
+        "openai/codex",
+        "continuedev/continue",
+        "aider-ai/aider",
+        "cline/cline",
+        "RooVetGit/Roo-Code",
+        "opencode-ai/opencode",
+        "google-gemini/gemini-cli",
+      ],
       language: "TypeScript",
       evidence: [
         {
@@ -206,7 +244,16 @@ const data = {
       comments: 201,
       reactions: 52,
       openDays: 65,
-      repos: ["langfuse/langfuse", "langchain-ai/langsmith-sdk", "openlit/openlit"],
+      repos: [
+        "langfuse/langfuse",
+        "langchain-ai/langsmith-sdk",
+        "openlit/openlit",
+        "Arize-ai/phoenix",
+        "Helicone/helicone",
+        "promptfoo/promptfoo",
+        "traceloop/openllmetry",
+        "langwatch/langwatch",
+      ],
       language: "TypeScript",
       evidence: [
         {
@@ -316,19 +363,42 @@ const repoMetrics = {
   "langchain-ai/langchain": { stars: 108000, forks: 18100, contributors: 2200 },
   "crewAIInc/crewAI": { stars: 35700, forks: 4300, contributors: 310 },
   "microsoft/autogen": { stars: 47600, forks: 7100, contributors: 430 },
+  "mem0ai/mem0": { stars: 57600, forks: 6600, contributors: 170 },
+  "getzep/zep": { stars: 4600, forks: 630, contributors: 75 },
+  "langchain-ai/langgraph": { stars: 33800, forks: 5700, contributors: 260 },
+  "Significant-Gravitas/AutoGPT": { stars: 184700, forks: 46200, contributors: 520 },
   "modelcontextprotocol/servers": { stars: 58900, forks: 6400, contributors: 520 },
   "modelcontextprotocol/inspector": { stars: 9200, forks: 1100, contributors: 84 },
+  "modelcontextprotocol/typescript-sdk": { stars: 12600, forks: 1900, contributors: 120 },
+  "modelcontextprotocol/python-sdk": { stars: 23200, forks: 3500, contributors: 150 },
+  "punkpeye/awesome-mcp-servers": { stars: 88500, forks: 11100, contributors: 180 },
   "browser-use/browser-use": { stars: 64800, forks: 7100, contributors: 240 },
   "run-llama/llama_index": { stars: 43100, forks: 6200, contributors: 910 },
   "explodinggradients/ragas": { stars: 8900, forks: 1200, contributors: 150 },
+  "deepset-ai/haystack": { stars: 25500, forks: 2800, contributors: 440 },
+  "chroma-core/chroma": { stars: 28200, forks: 2300, contributors: 250 },
+  "qdrant/qdrant": { stars: 31800, forks: 2300, contributors: 210 },
+  "weaviate/weaviate": { stars: 16300, forks: 1300, contributors: 210 },
   "microsoft/playwright": { stars: 74400, forks: 4300, contributors: 620 },
   "Skyvern-AI/skyvern": { stars: 12600, forks: 1500, contributors: 92 },
+  "microsoft/playwright-mcp": { stars: 33500, forks: 2800, contributors: 80 },
+  "browserbase/stagehand": { stars: 22900, forks: 1500, contributors: 95 },
+  "browserbase/mcp-server-browserbase": { stars: 3400, forks: 360, contributors: 35 },
   "openai/codex": { stars: 12500, forks: 980, contributors: 68 },
   "continuedev/continue": { stars: 28300, forks: 3000, contributors: 210 },
   "aider-ai/aider": { stars: 37200, forks: 3900, contributors: 260 },
+  "cline/cline": { stars: 62700, forks: 6600, contributors: 300 },
+  "RooVetGit/Roo-Code": { stars: 24200, forks: 3300, contributors: 180 },
+  "opencode-ai/opencode": { stars: 12800, forks: 1400, contributors: 95 },
+  "google-gemini/gemini-cli": { stars: 104900, forks: 14000, contributors: 460 },
   "langfuse/langfuse": { stars: 13500, forks: 1200, contributors: 170 },
   "langchain-ai/langsmith-sdk": { stars: 2100, forks: 420, contributors: 54 },
   "openlit/openlit": { stars: 2900, forks: 260, contributors: 48 },
+  "Arize-ai/phoenix": { stars: 10000, forks: 910, contributors: 140 },
+  "Helicone/helicone": { stars: 5800, forks: 590, contributors: 100 },
+  "promptfoo/promptfoo": { stars: 21900, forks: 1900, contributors: 210 },
+  "traceloop/openllmetry": { stars: 7200, forks: 980, contributors: 90 },
+  "langwatch/langwatch": { stars: 3300, forks: 320, contributors: 55 },
 };
 
 const selectors = {
@@ -406,6 +476,13 @@ function renderRepoImpact(repos) {
 
 function githubRepoUrl(repo) {
   return `https://github.com/${repo}`;
+}
+
+function githubIssueUrl(issue) {
+  const directUrl = issue.url || "";
+  if (directUrl && !/\/issues\/?$/.test(directUrl)) return directUrl;
+  const query = encodeURIComponent(`is:issue ${issue.title}`);
+  return `${githubRepoUrl(issue.repo)}/issues?q=${query}`;
 }
 
 function getFilteredPainPoints() {
@@ -532,12 +609,17 @@ function renderPainTable(rows = getFilteredPainPoints()) {
             </span>
             <span class="pain-repo-line">
               ${item.repos
-                .slice(0, 2)
+                .slice(0, 4)
                 .map(
                   (repo) =>
                     `<a class="pain-repo-mini" href="${escapeHtml(githubRepoUrl(repo))}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()" title="${escapeHtml(renderRepoSignal(repo))}">${escapeHtml(repo)}</a>`,
                 )
                 .join("")}
+              ${
+                item.repos.length > 4
+                  ? `<a class="pain-repo-mini repo-more" href="${escapeHtml(`https://github.com/search?q=${encodeURIComponent(item.repos.join(" OR "))}&type=repositories`)}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">+${item.repos.length - 4} repos</a>`
+                  : ""
+              }
             </span>
           </td>
           <td><span class="tag">${escapeHtml(categoryLabels[item.category] ?? item.category)}</span></td>
@@ -661,10 +743,11 @@ function collectEvidenceIssues(rows = getFilteredPainPoints()) {
         score: painPoint.score,
         clusterId: painPoint.id,
         repoSignal: renderRepoSignal(issue.repo),
+        issueUrl: githubIssueUrl(issue),
       })),
     )
     .sort((a, b) => b.comments + b.reactions - (a.comments + a.reactions))
-    .slice(0, 5);
+    .slice(0, 10);
 }
 
 function collectRepositories(rows = getFilteredPainPoints()) {
@@ -692,7 +775,7 @@ function collectRepositories(rows = getFilteredPainPoints()) {
 
   return Array.from(repos.values())
     .sort((a, b) => b.score - a.score || b.comments - a.comments)
-    .slice(0, 5);
+    .slice(0, 12);
 }
 
 function collectTopics(rows = getFilteredPainPoints()) {
@@ -736,7 +819,7 @@ function renderEvidenceTable(rows = getFilteredPainPoints()) {
       .map(
         (issue) => `
           <div class="data-row evidence-row">
-            <a href="${escapeHtml(issue.url)}" target="_blank" rel="noreferrer">${escapeHtml(issue.title)}</a>
+            <a href="${escapeHtml(issue.issueUrl)}" target="_blank" rel="noreferrer">${escapeHtml(issue.title)}</a>
             <a class="repo-stack repo-link" href="${escapeHtml(githubRepoUrl(issue.repo))}" target="_blank" rel="noreferrer" onclick="event.stopPropagation()">
               <strong>${escapeHtml(issue.repo)}</strong>
               <small>${escapeHtml(issue.created)}</small>
@@ -898,7 +981,7 @@ function openDrawer(id) {
     <div class="drawer-actions" aria-label="Cluster actions">
       <a class="drawer-action" href="#opportunities">Open opportunity</a>
       <a class="drawer-action" href="#content">Open content angle</a>
-      <a class="drawer-action" href="${escapeHtml(item.evidence[0]?.url ?? "https://github.com/search")}" target="_blank" rel="noreferrer">View source issues</a>
+      <a class="drawer-action" href="${escapeHtml(item.evidence[0] ? githubIssueUrl(item.evidence[0]) : "https://github.com/search")}" target="_blank" rel="noreferrer">View source issues</a>
     </div>
 
     <section class="drawer-section">
@@ -950,7 +1033,7 @@ function openDrawer(id) {
           .map(
             (issue) => `
               <div class="drawer-evidence-row">
-                <span><a class="drawer-issue-link" href="${escapeHtml(issue.url)}" target="_blank" rel="noreferrer">${escapeHtml(issue.title)}</a></span>
+                <span><a class="drawer-issue-link" href="${escapeHtml(githubIssueUrl(issue))}" target="_blank" rel="noreferrer">${escapeHtml(issue.title)}</a></span>
                 <span><a class="repo-inline-link" href="${escapeHtml(githubRepoUrl(issue.repo))}" target="_blank" rel="noreferrer">${escapeHtml(issue.repo)}</a></span>
                 <span title="${escapeHtml(renderRepoSignal(issue.repo))}">${escapeHtml(renderRepoSignal(issue.repo))}</span>
                 <span>${issue.comments}</span>
