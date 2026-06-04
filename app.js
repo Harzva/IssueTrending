@@ -1035,6 +1035,7 @@ async function fetchGithubIssues() {
     `;
   } catch (error) {
     selectors.liveStatus.textContent = `GitHub 抓取失败：${error.message}。页面仍可使用内置演示数据。`;
+    renderDefaultLiveResults();
   } finally {
     selectors.refreshGithub.disabled = false;
     selectors.refreshGithub.textContent = "抓取 GitHub";
@@ -1060,6 +1061,33 @@ async function fetchLiveRepoSignals(items) {
   );
 
   return new Map(results.filter((result) => result.status === "fulfilled").map((result) => result.value));
+}
+
+function renderDefaultLiveResults() {
+  const issues = collectEvidenceIssues(data.painPoints);
+
+  selectors.liveResults.innerHTML = `
+    <div class="data-row live-row data-head">
+      <span>Issue</span>
+      <span>Repo</span>
+      <span>Repo signal</span>
+      <span>Comments</span>
+      <span>Updated</span>
+    </div>
+    ${issues
+      .map(
+        (issue) => `
+          <div class="data-row live-row">
+            <a href="${escapeHtml(issue.url)}" target="_blank" rel="noreferrer">${escapeHtml(issue.title)}</a>
+            <a class="repo-inline-link" href="${escapeHtml(githubRepoUrl(issue.repo))}" target="_blank" rel="noreferrer">${escapeHtml(issue.repo)}</a>
+            <span class="repo-signal" title="${escapeHtml(issue.repoSignal)}">${escapeHtml(issue.repoSignal)}</span>
+            <span class="evidence-meta">${issue.comments}</span>
+            <span class="evidence-meta">${escapeHtml(issue.created)}</span>
+          </div>
+        `,
+      )
+      .join("")}
+  `;
 }
 
 function bindEvents() {
@@ -1116,6 +1144,7 @@ function render() {
   renderMiniList(selectors.contentList, data.contentAngles, "Potential");
   renderSignals();
   renderRailSignals();
+  renderDefaultLiveResults();
 }
 
 function renderWorkspaceData() {
