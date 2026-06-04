@@ -360,7 +360,7 @@ a {
   max-width: 1540px;
   height: 100vh;
   margin: 0 auto;
-  padding: 14px 18px 24px;
+  padding: 12px 18px 18px;
   overflow-y: auto;
   scrollbar-gutter: stable;
   scrollbar-width: thin;
@@ -727,7 +727,7 @@ h3 {
   gap: 12px;
   align-items: stretch;
   min-width: 0;
-  height: clamp(620px, calc(100vh - 154px), 780px);
+  height: clamp(560px, calc(100vh - 168px), 700px);
   min-height: 0;
   overflow: hidden;
 }
@@ -751,7 +751,7 @@ h3 {
 
 .primary-panel {
   display: grid;
-  grid-template-rows: auto auto auto minmax(212px, 1fr) minmax(178px, 220px) minmax(116px, 152px);
+  grid-template-rows: auto auto auto minmax(188px, 1fr) minmax(156px, 196px) minmax(112px, 142px);
   gap: 8px;
   height: 100%;
   overflow: hidden;
@@ -946,6 +946,7 @@ h3 {
   width: 100%;
   max-width: 100%;
   min-height: 0;
+  max-height: 100%;
   overflow: auto;
   border-bottom: 1px solid var(--line);
   scrollbar-width: thin;
@@ -1356,6 +1357,7 @@ tbody tr.selected {
 .repo-table,
 .release-table {
   min-height: 0;
+  max-height: 100%;
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--line-strong) transparent;
@@ -1731,13 +1733,14 @@ tbody tr.selected {
 
 .signals-panel,
 .live-panel {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .signals-panel {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  max-height: 220px;
+  height: 178px;
+  max-height: 178px;
   overflow: hidden;
 }
 
@@ -1828,7 +1831,8 @@ tbody tr.selected {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 12px;
-  max-height: 260px;
+  height: 210px;
+  max-height: 210px;
   overflow: hidden;
 }
 
@@ -2227,7 +2231,8 @@ tbody tr.selected {
 
   .insight-rail {
     height: auto;
-    overflow: visible;
+    max-height: 540px;
+    overflow: auto;
     padding-right: 0;
   }
 
@@ -2239,7 +2244,32 @@ tbody tr.selected {
   .evidence-table,
   .repo-table,
   .release-table {
-    max-height: none;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+
+  .table-wrap {
+    max-height: 360px;
+  }
+
+  .evidence-table,
+  .repo-table {
+    max-height: 260px;
+  }
+
+  .release-table {
+    max-height: 220px;
+  }
+
+  .signals-panel {
+    height: 178px;
+    max-height: 178px;
+  }
+
+  .live-panel {
+    height: 230px;
+    max-height: 230px;
   }
 }
 
