@@ -515,7 +515,7 @@ function renderPainTable(rows = getFilteredPainPoints()) {
     .map(
       (item, index) => `
         <tr data-id="${escapeHtml(item.id)}" tabindex="0" class="${state.selectedId === item.id ? "selected" : ""}">
-          <td><span class="rank">#${index + 1}</span></td>
+          <td><span class="rank">${index + 1}</span></td>
           <td>
             <span class="pain-title">${escapeHtml(item.title)}</span>
             <span class="pain-summary">${escapeHtml(item.summary)}</span>
