@@ -1,10 +1,30 @@
+const TRACKED_STORAGE_KEY = "issuetrending.trackedIds.v1";
+const defaultTrackedIds = ["agent-memory", "mcp-debugging"];
+
+function loadTrackedIds() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(TRACKED_STORAGE_KEY) || "null");
+    return Array.isArray(parsed) && parsed.length ? parsed : defaultTrackedIds;
+  } catch {
+    return defaultTrackedIds;
+  }
+}
+
+function saveTrackedIds() {
+  try {
+    localStorage.setItem(TRACKED_STORAGE_KEY, JSON.stringify([...state.trackedIds]));
+  } catch {
+    // Local storage can be unavailable in private or embedded contexts; tracking still works for this session.
+  }
+}
+
 const state = {
   activeCategory: "all",
   search: "",
   sortKey: "score",
   sortDirection: "desc",
   selectedId: null,
-  trackedIds: new Set(["agent-memory", "mcp-debugging"]),
+  trackedIds: new Set(loadTrackedIds()),
   rankingOpen: false,
   timeframe: "7d",
   liveMode: "seed",
@@ -524,6 +544,7 @@ const selectors = {
   releaseScopeButtons: document.querySelectorAll("[data-release-scope]"),
   releaseStatus: document.querySelector("#releaseStatus"),
   releaseTable: document.querySelector("#releaseTable"),
+  trackedSummary: document.querySelector("#trackedSummary"),
 };
 
 function escapeHtml(value) {
@@ -795,6 +816,7 @@ function renderPainTable(rows = getFilteredPainPoints()) {
       } else {
         state.trackedIds.add(id);
       }
+      saveTrackedIds();
       renderWorkspaceData();
     });
   });
@@ -831,6 +853,17 @@ function renderResultMeta(rows = getFilteredPainPoints()) {
     <span><strong>Query</strong>${escapeHtml(query)}</span>
     <span><strong>Category</strong>${escapeHtml(category)}</span>
   `;
+  renderTrackedSummary();
+}
+
+function renderTrackedSummary() {
+  if (!selectors.trackedSummary) return;
+  const count = state.trackedIds.size;
+  const total = data.painPoints.length;
+  const label = `${count} tracked pain clusters saved locally`;
+  selectors.trackedSummary.querySelector("strong").textContent = count;
+  selectors.trackedSummary.setAttribute("aria-label", label);
+  selectors.trackedSummary.title = `${label} / ${total} total`;
 }
 
 function renderRankingPanel() {
