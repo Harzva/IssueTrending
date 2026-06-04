@@ -16,7 +16,6 @@ const timeframeConfig = {
     compare: "Prior 7D",
     issueScale: 1,
     deltaScale: 1,
-    sparkOffset: 0,
     metricDelta: "+18%",
   },
   "30d": {
@@ -24,7 +23,6 @@ const timeframeConfig = {
     compare: "Prior 30D",
     issueScale: 4,
     deltaScale: 2.4,
-    sparkOffset: 2,
     metricDelta: "+46%",
   },
 };
@@ -654,20 +652,6 @@ function renderMiniList(container, items, metricLabel = "Score") {
       )
       .join("")}
   `;
-}
-
-function renderSparkline(seed) {
-  const patterns = [
-    [20, 42, 35, 58, 50, 72],
-    [24, 38, 55, 47, 66, 80],
-    [18, 31, 44, 39, 61, 69],
-    [28, 24, 40, 55, 49, 67],
-    [15, 30, 28, 43, 51, 62],
-    [22, 27, 33, 46, 52, 59],
-  ];
-  return patterns[seed % patterns.length]
-    .map((height) => `<i style="height: ${height}%"></i>`)
-    .join("");
 }
 
 function collectEvidenceIssues(rows = getFilteredPainPoints()) {
