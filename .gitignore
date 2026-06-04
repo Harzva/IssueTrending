@@ -1,0 +1,8 @@
+*.png
+!issuetrending-cockpit-v25-rank-badges-desktop.png
+!issuetrending-cockpit-v25-rank-badges-mobile.png
+.DS_Store
+Thumbs.db
+node_modules/
+.wrangler/
+.dev.vars

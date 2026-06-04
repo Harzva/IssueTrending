@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IssueTrending | GitHub Issue 需求情报站</title>
+    <meta
+      name="description"
+      content="IssueTrending 从 GitHub issues 中发现 AI Agent、MCP、RAG、LLMOps 领域的开发者痛点、产品机会和内容选题。"
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2314212b'/%3E%3Ctext x='32' y='39' font-size='22' text-anchor='middle' fill='white' font-family='monospace' font-weight='700'%3EIT%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary">
+        <a class="brand" href="#" aria-label="IssueTrending home">
+          <span class="brand-mark">IT</span>
+          <span>
+            <strong>IssueTrending</strong>
+            <small>Issue intelligence</small>
+          </span>
+        </a>
+
+        <nav class="nav-list">
+          <span class="nav-group">Overview</span>
+          <a class="nav-item active" href="#pain-points"><span class="nav-icon radar"></span>痛点雷达</a>
+          <a class="nav-item" href="#opportunities"><span class="nav-icon opportunity"></span>产品机会</a>
+          <a class="nav-item" href="#content"><span class="nav-icon content"></span>内容选题</a>
+          <span class="nav-group">Discover</span>
+          <a class="nav-item" href="#pain-points"><span class="nav-icon trending"></span>Trending Issues</a>
+          <a class="nav-item" href="#repos"><span class="nav-icon repo-icon"></span>Rising Repos</a>
+          <a class="nav-item" href="#topics"><span class="nav-icon topic-icon"></span>Topic Explorer</a>
+          <span class="nav-group">Track</span>
+          <a class="nav-item" href="#signals"><span class="nav-icon signal-icon"></span>Saved Views</a>
+          <a class="nav-item" href="#live"><span class="nav-icon alert-icon"></span>Alerts <span class="nav-count">12</span></a>
+          <span class="nav-group">Analyze</span>
+          <a class="nav-item" href="#signals"><span class="nav-icon signal-icon"></span>跨项目信号</a>
+          <a class="nav-item" href="#live"><span class="nav-icon live-icon"></span>实时抓取 <span class="nav-count" data-live-count>8</span></a>
+        </nav>
+
+        <div class="sidebar-note">
+          <span class="note-label">MVP vertical</span>
+          <p>AI Agent / Coding Agent / MCP / RAG / LLMOps</p>
+          <div class="sync-note">
+            <span>Last sync</span>
+            <strong>04:00 CST</strong>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="globalbar">
+          <div class="commandbar" role="search">
+            <label class="sr-only" for="searchInput">搜索痛点、仓库或机会</label>
+            <input id="searchInput" type="search" placeholder="Search issues, repos, pain clusters..." />
+          </div>
+
+          <div class="toolbar">
+            <div class="timeframe" aria-label="Timeframe">
+              <button class="timeframe-button active" type="button" data-range="7d">7D</button>
+              <button class="timeframe-button" type="button" data-range="30d">30D</button>
+            </div>
+            <button class="tool-button" id="compareButton" type="button">Prior 7D</button>
+            <button class="tool-button icon-button" type="button" aria-label="Create tracker">+</button>
+            <button class="tool-button icon-button" type="button" aria-label="API">/</button>
+            <button class="tool-button star-button" type="button" aria-label="Saved stars">☆ <strong>12,540</strong></button>
+            <button id="refreshGithub" class="button ghost" type="button">抓取 GitHub</button>
+          </div>
+        </header>
+
+        <div class="run-strip" aria-label="Index status">
+          <span><strong>Query</strong> is:issue is:open comments:&gt;10 agent</span>
+          <span><strong>Pool</strong> AI Agent / MCP / RAG / LLMOps</span>
+          <span><strong>Mode</strong> seed data + public GitHub API</span>
+        </div>
+
+        <section class="cockpit-head">
+          <div class="title-block">
+            <div class="title-line">
+              <span class="pulse-mark" aria-hidden="true"></span>
+              <h1>IssueTrending</h1>
+              <span class="status-pill">Updated · MVP</span>
+            </div>
+            <p>GitHub issue-backed pain clusters.</p>
+          </div>
+
+          <div class="summary-grid" aria-label="Daily overview">
+            <article class="metric">
+              <span class="metric-label">Pain Clusters</span>
+              <strong id="metricPainPoints">0</strong>
+              <small><span>+18%</span><span class="metric-spark" aria-hidden="true"><i></i><i></i><i></i><i></i></span></small>
+            </article>
+            <article class="metric">
+              <span class="metric-label">New Issues</span>
+              <strong id="metricIssues">0</strong>
+              <small><span>indexed</span><span class="metric-spark" aria-hidden="true"><i></i><i></i><i></i><i></i></span></small>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Comments</span>
+              <strong id="metricComments">0</strong>
+              <small><span>7D volume</span><span class="metric-spark" aria-hidden="true"><i></i><i></i><i></i><i></i></span></small>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Reactions</span>
+              <strong id="metricReactions">0</strong>
+              <small><span>7D signal</span><span class="metric-spark" aria-hidden="true"><i></i><i></i><i></i><i></i></span></small>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Unique Repos</span>
+              <strong id="metricRepos">0</strong>
+              <small><span>unique</span><span class="metric-spark" aria-hidden="true"><i></i><i></i><i></i><i></i></span></small>
+            </article>
+            <article class="metric">
+              <span class="metric-label">Pain Score</span>
+              <strong id="metricOpportunities">0</strong>
+              <small><span>high</span><span class="metric-spark" aria-hidden="true"><i></i><i></i><i></i><i></i></span></small>
+            </article>
+          </div>
+        </section>
+
+        <section class="workspace">
+          <div class="primary-panel" id="pain-points">
+            <div class="section-head">
+              <div>
+                <h2>Today's Top Pain Clusters</h2>
+                <p>Ranked by comments, reactions, open age, and cross-repo repetition.</p>
+              </div>
+              <div class="section-tools">
+                <button class="text-tool" id="rankingToggle" type="button" aria-expanded="false" aria-controls="rankingPanel">How ranked?</button>
+                <div class="filter-row" id="categoryFilters" aria-label="Category filters"></div>
+              </div>
+            </div>
+
+            <div class="ranking-panel" id="rankingPanel" hidden>
+              <span><strong>Score</strong> comments × 0.42 + reactions × 0.28 + repos × 0.2 + open age × 0.1</span>
+              <span><strong>Evidence</strong> open GitHub issues only</span>
+              <span><strong>Refresh</strong> daily snapshot + live public API query</span>
+            </div>
+
+            <div class="result-meta" id="resultMeta" aria-live="polite"></div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th><button class="sort-button" type="button" data-sort="title">Pain Cluster</button></th>
+                    <th>Category</th>
+                    <th>Trend</th>
+                    <th><button class="sort-button" type="button" data-sort="issues">Issues</button></th>
+                    <th><button class="sort-button" type="button" data-sort="repos">Affected Repos</button></th>
+                    <th><button class="sort-button" type="button" data-sort="comments">Comments</button></th>
+                    <th><button class="sort-button" type="button" data-sort="reactions">Reactions</button></th>
+                    <th><button class="sort-button active desc" type="button" data-sort="score">Pain Score</button></th>
+                    <th>Track</th>
+                  </tr>
+                </thead>
+                <tbody id="painTable"></tbody>
+              </table>
+            </div>
+
+            <div class="subsurface-grid">
+              <section class="subsurface">
+                <div class="subsurface-head">
+                  <h3>Evidence Issues</h3>
+                  <span>Latest indexed</span>
+                </div>
+                <div class="evidence-table" id="evidenceTable"></div>
+              </section>
+
+              <section class="subsurface" id="repos">
+                <div class="subsurface-head">
+                  <h3>Related Repositories</h3>
+                  <span>Most affected</span>
+                </div>
+                <div class="repo-table" id="repoTable"></div>
+              </section>
+            </div>
+          </div>
+
+          <aside class="insight-rail">
+            <section class="panel compact" id="opportunities">
+              <div class="section-head tight">
+                <h2>Product Opportunities</h2>
+                <a class="view-link" href="#opportunities">View all</a>
+              </div>
+              <div id="opportunityList" class="compact-list"></div>
+            </section>
+
+            <section class="panel compact" id="content">
+              <div class="section-head tight">
+                <h2>Content Angles</h2>
+                <a class="view-link" href="#content">View all</a>
+              </div>
+              <div id="contentList" class="compact-list"></div>
+            </section>
+
+            <section class="panel compact" id="railSignals">
+              <div class="section-head tight">
+                <h2>Cross-Project Signals</h2>
+                <a class="view-link" href="#signals">View all</a>
+              </div>
+              <div id="railSignalList" class="rail-signal-list"></div>
+            </section>
+
+            <section class="panel compact" id="topics">
+              <div class="section-head tight">
+                <h2>Top Topics</h2>
+                <a class="view-link" href="#topics">View all</a>
+              </div>
+              <div id="topicCloud" class="topic-cloud"></div>
+            </section>
+          </aside>
+        </section>
+
+        <section class="signals-panel" id="signals">
+          <div class="section-head">
+            <div>
+              <h2>跨项目共同问题</h2>
+              <p>当同类 issue 同时出现在多个项目里，说明它更像“市场需求”而不是单点 bug。</p>
+            </div>
+          </div>
+          <div id="signalGrid" class="signal-grid"></div>
+        </section>
+
+        <section class="live-panel" id="live" aria-live="polite">
+          <div>
+            <h2>GitHub 实时抓取结果</h2>
+            <p id="liveStatus">默认展示内置演示数据。点击“抓取 GitHub”会从公开 Search API 拉取最新 open issues。</p>
+          </div>
+          <div id="liveResults" class="live-results"></div>
+        </section>
+
+        <footer class="sourcebar">
+          <span>Source: GitHub Public API</span>
+          <span>Data freshness: local seed + live search</span>
+          <span>Indexed vertical: AI Agent / MCP / RAG / LLMOps</span>
+        </footer>
+      </main>
+    </div>
+
+    <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+    <aside class="drawer" id="detailDrawer" aria-hidden="true" aria-label="Pain point detail">
+      <button class="drawer-close" id="closeDrawer" type="button" aria-label="关闭详情">×</button>
+      <div id="drawerContent"></div>
+    </aside>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
