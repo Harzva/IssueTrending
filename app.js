@@ -9,6 +9,7 @@ const state = {
   timeframe: "7d",
   liveMode: "seed",
   releaseMode: "seed",
+  releaseScope: "hot",
   releaseDownloads: [],
 };
 
@@ -488,6 +489,12 @@ const releaseDownloadSeed = [
   },
 ].sort((a, b) => b.totalDownloads - a.totalDownloads);
 
+const releaseScopeLabels = {
+  hot: "Hot candidates",
+  pain: "Current pain repos",
+  watch: "Watchlist",
+};
+
 const selectors = {
   painTable: document.querySelector("#painTable"),
   categoryFilters: document.querySelector("#categoryFilters"),
@@ -514,6 +521,7 @@ const selectors = {
   timeframeButtons: document.querySelectorAll(".timeframe-button"),
   compareButton: document.querySelector("#compareButton"),
   scanReleases: document.querySelector("#scanReleases"),
+  releaseScopeButtons: document.querySelectorAll("[data-release-scope]"),
   releaseStatus: document.querySelector("#releaseStatus"),
   releaseTable: document.querySelector("#releaseTable"),
 };
@@ -672,6 +680,8 @@ function renderFilters() {
   selectors.categoryFilters.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
       state.activeCategory = button.dataset.category;
+      state.releaseDownloads = [];
+      state.releaseMode = "seed";
       render();
     });
   });
@@ -969,18 +979,61 @@ function renderRepoTable(rows = getFilteredPainPoints()) {
   `;
 }
 
-function candidateReposForReleaseScan(rows = getFilteredPainPoints()) {
-  return [...new Set([...releaseWatchRepos, ...rows.flatMap((item) => item.repos)])].slice(0, 24);
+function currentPainRepos(rows = getFilteredPainPoints()) {
+  return rows.flatMap((item) => item.repos);
 }
 
-function renderReleaseTable(items = state.releaseDownloads.length ? state.releaseDownloads : releaseDownloadSeed) {
+function releaseSourceLabel(repo, rows = getFilteredPainPoints()) {
+  const sources = [];
+  if (releaseDownloadSeed.some((item) => item.repo === repo)) sources.push("HotGit");
+  if (currentPainRepos(rows).includes(repo)) sources.push("Pain");
+  if (releaseWatchRepos.includes(repo)) sources.push("Watch");
+  return sources.length ? sources.join(" / ") : "Live";
+}
+
+function candidateReposForReleaseScan(rows = getFilteredPainPoints()) {
+  const painRepos = currentPainRepos(rows);
+  const hotRepos = releaseDownloadSeed.map((item) => item.repo);
+  const painReposWithReleaseEvidence = hotRepos.filter((repo) => painRepos.includes(repo));
+  const pools = {
+    hot: [...hotRepos, ...releaseWatchRepos, ...painRepos],
+    pain: [...painReposWithReleaseEvidence, ...painRepos],
+    watch: releaseWatchRepos,
+  };
+
+  return [...new Set(pools[state.releaseScope] ?? pools.hot)].slice(0, 24);
+}
+
+function seedReleaseItemsForScope(rows = getFilteredPainPoints()) {
+  const candidates = new Set(candidateReposForReleaseScan(rows));
+  return releaseDownloadSeed
+    .filter((item) => candidates.has(item.repo))
+    .map((item) => ({ ...item, source: releaseSourceLabel(item.repo, rows) }));
+}
+
+function updateReleaseScopeControls() {
+  selectors.releaseScopeButtons.forEach((button) => {
+    const active = button.dataset.releaseScope === state.releaseScope;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", active ? "true" : "false");
+  });
+}
+
+function releaseScopeStatus(items, rows = getFilteredPainPoints()) {
+  const candidates = candidateReposForReleaseScan(rows);
+  const label = releaseScopeLabels[state.releaseScope] ?? releaseScopeLabels.hot;
+  return `${label} · candidates ${candidates.length} · cached assets ${items.length}`;
+}
+
+function renderReleaseTable(items = state.releaseDownloads.length ? state.releaseDownloads : seedReleaseItemsForScope()) {
+  updateReleaseScopeControls();
   selectors.releaseTable.innerHTML = `
     <div class="data-row release-row data-head">
       <span>Repository</span>
       <span>Release</span>
       <span>Downloads</span>
       <span>Top asset</span>
-      <span>Published</span>
+      <span>Proof</span>
     </div>
     ${items
       .map(
@@ -988,7 +1041,7 @@ function renderReleaseTable(items = state.releaseDownloads.length ? state.releas
           <div class="data-row release-row">
             <a class="repo-stack repo-link" href="${escapeHtml(githubRepoUrl(item.repo))}" target="_blank" rel="noreferrer">
               <strong>${escapeHtml(item.repo)}</strong>
-              <small>${escapeHtml(renderRepoSignal(item.repo))}</small>
+              <small>${escapeHtml(item.source ?? releaseSourceLabel(item.repo))} · ${escapeHtml(renderRepoSignal(item.repo))}</small>
             </a>
             <a class="repo-inline-link" href="${escapeHtml(githubReleaseUrl(item.repo, item.tagName))}" target="_blank" rel="noreferrer">
               ${escapeHtml(item.tagName)}
@@ -997,7 +1050,7 @@ function renderReleaseTable(items = state.releaseDownloads.length ? state.releas
             <a class="repo-inline-link" href="${escapeHtml(item.topAssetUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(item.topAssetName)}">
               ${escapeHtml(item.topAssetName)} · ${compactNumber(item.topAssetDownloads)}
             </a>
-            <span class="evidence-meta">${escapeHtml(item.publishedAt)}</span>
+            <span class="evidence-meta">${escapeHtml(item.assetCount)} assets · ${escapeHtml(item.publishedAt)}</span>
           </div>
         `,
       )
@@ -1007,7 +1060,7 @@ function renderReleaseTable(items = state.releaseDownloads.length ? state.releas
         ? ""
         : `<div class="empty-state">
             <strong>No release asset downloads scanned</strong>
-            <span>Click Scan releases to rank current repos by uploaded asset download_count.</span>
+            <span>Change scope or scan releases; only uploaded assets have download_count.</span>
           </div>`
     }
   `;
@@ -1044,15 +1097,17 @@ async function fetchRepoLatestReleaseDownloads(repo) {
 
 async function scanReleaseDownloads() {
   const repos = candidateReposForReleaseScan();
+  const scopeLabel = releaseScopeLabels[state.releaseScope] ?? releaseScopeLabels.hot;
   selectors.scanReleases.disabled = true;
   selectors.scanReleases.textContent = "Scanning...";
-  selectors.releaseStatus.textContent = `Scanning ${repos.length} repos; no-assets repos are filtered out.`;
+  selectors.releaseStatus.textContent = `Scanning ${scopeLabel} · ${repos.length} repos · no-assets repos filtered`;
 
   const results = await Promise.allSettled(repos.map((repo) => fetchRepoLatestReleaseDownloads(repo)));
   const failures = results.filter((result) => result.status === "rejected").length;
   const downloads = results
     .filter((result) => result.status === "fulfilled" && result.value)
     .map((result) => result.value)
+    .map((item) => ({ ...item, source: releaseSourceLabel(item.repo) }))
     .sort((a, b) => b.totalDownloads - a.totalDownloads)
     .slice(0, 10);
   const skipped = results.length - downloads.length;
@@ -1060,14 +1115,14 @@ async function scanReleaseDownloads() {
   state.releaseMode = "live";
   if (downloads.length) {
     state.releaseDownloads = downloads;
-    selectors.releaseStatus.textContent = `Latest release assets only · ${downloads.length} ranked · ${skipped} skipped`;
+    selectors.releaseStatus.textContent = `${scopeLabel} · latest release assets · ${downloads.length} ranked · ${skipped} skipped`;
     renderReleaseTable(downloads);
   } else {
     state.releaseDownloads = [];
     selectors.releaseStatus.textContent = failures
-      ? `GitHub API rate-limited or unavailable · showing cached release asset ranking`
-      : `No uploaded release assets found in ${repos.length} scanned repos · showing cached ranking`;
-    renderReleaseTable(releaseDownloadSeed);
+      ? `GitHub API rate-limited or unavailable · showing cached ${scopeLabel} ranking`
+      : `No uploaded release assets found in ${repos.length} scanned repos · showing cached ${scopeLabel} ranking`;
+    renderReleaseTable(seedReleaseItemsForScope());
   }
   selectors.scanReleases.disabled = false;
   selectors.scanReleases.textContent = "Scan releases";
@@ -1380,6 +1435,8 @@ function renderDefaultLiveResults(rows = getFilteredPainPoints()) {
 function bindEvents() {
   selectors.searchInput.addEventListener("input", (event) => {
     state.search = event.target.value;
+    state.releaseDownloads = [];
+    state.releaseMode = "seed";
     renderWorkspaceData();
   });
 
@@ -1400,6 +1457,8 @@ function bindEvents() {
   selectors.timeframeButtons.forEach((button) => {
     button.addEventListener("click", () => {
       state.timeframe = button.dataset.range;
+      state.releaseDownloads = [];
+      state.releaseMode = "seed";
       renderMetrics();
       renderTimeframeButtons();
       renderWorkspaceData();
@@ -1415,6 +1474,15 @@ function bindEvents() {
   selectors.drawerBackdrop.addEventListener("click", closeDrawer);
   selectors.refreshGithub.addEventListener("click", fetchGithubIssues);
   selectors.scanReleases.addEventListener("click", scanReleaseDownloads);
+  selectors.releaseScopeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      state.releaseScope = button.dataset.releaseScope;
+      state.releaseDownloads = [];
+      state.releaseMode = "seed";
+      renderReleaseTable();
+      selectors.releaseStatus.textContent = releaseScopeStatus(seedReleaseItemsForScope());
+    });
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeDrawer();
@@ -1441,7 +1509,11 @@ function renderWorkspaceData() {
   renderEvidenceTable(rows);
   renderRepoTable(rows);
   renderTopicCloud(rows);
-  renderReleaseTable();
+  const releaseItems = state.releaseDownloads.length ? state.releaseDownloads : seedReleaseItemsForScope(rows);
+  renderReleaseTable(releaseItems);
+  if (!state.releaseDownloads.length) {
+    selectors.releaseStatus.textContent = releaseScopeStatus(releaseItems, rows);
+  }
   if (state.liveMode === "seed") {
     renderDefaultLiveResults(rows);
   }

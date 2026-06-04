@@ -1275,6 +1275,46 @@ tbody tr.selected {
   margin-top: 10px;
 }
 
+.release-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  min-width: 0;
+}
+
+.release-scope {
+  height: 28px;
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.release-scope button {
+  height: 26px;
+  padding: 0 8px;
+  border: 0;
+  border-left: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.release-scope button:first-child {
+  border-left: 0;
+}
+
+.release-scope button.active {
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+  font-weight: 750;
+}
+
 .subsurface-grid .subsurface {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
@@ -2241,6 +2281,16 @@ tbody tr.selected {
 
   .repo-row .repo-signal {
     white-space: normal;
+  }
+
+  .release-actions {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .release-actions::-webkit-scrollbar {
+    display: none;
   }
 
   .release-row {

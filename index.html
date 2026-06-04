@@ -184,7 +184,14 @@
                   <h3>Release Downloads</h3>
                   <span id="releaseStatus">Cached HotGit candidates · live scan uses uploaded assets only.</span>
                 </div>
-                <button class="text-tool" id="scanReleases" type="button">Scan releases</button>
+                <div class="release-actions" aria-label="Release download controls">
+                  <div class="release-scope" aria-label="Release candidate scope">
+                    <button class="active" type="button" data-release-scope="hot">Hot</button>
+                    <button type="button" data-release-scope="pain">Pain repos</button>
+                    <button type="button" data-release-scope="watch">Watchlist</button>
+                  </div>
+                  <button class="text-tool" id="scanReleases" type="button">Scan releases</button>
+                </div>
               </div>
               <div class="release-table" id="releaseTable"></div>
             </section>
