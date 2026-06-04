@@ -59,9 +59,11 @@ a {
 
 .app-shell {
   min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
   min-width: 0;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -356,8 +358,13 @@ a {
   width: 100%;
   min-width: 0;
   max-width: 1540px;
+  height: 100vh;
   margin: 0 auto;
   padding: 14px 18px 24px;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
 }
 
 .globalbar {
@@ -720,8 +727,8 @@ h3 {
   gap: 12px;
   align-items: stretch;
   min-width: 0;
-  height: calc(100vh - 174px);
-  min-height: 560px;
+  height: clamp(620px, calc(100vh - 154px), 780px);
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -744,10 +751,34 @@ h3 {
 
 .primary-panel {
   display: grid;
-  grid-template-rows: auto auto auto minmax(230px, 0.82fr) minmax(178px, 0.56fr);
-  gap: 0;
+  grid-template-rows: auto auto auto minmax(212px, 1fr) minmax(178px, 220px) minmax(116px, 152px);
+  gap: 8px;
   height: 100%;
   overflow: hidden;
+}
+
+#pain-points > .section-head {
+  grid-row: 1;
+}
+
+#rankingPanel {
+  grid-row: 2;
+}
+
+#resultMeta {
+  grid-row: 3;
+}
+
+#pain-points > .table-wrap {
+  grid-row: 4;
+}
+
+#pain-points > .subsurface-grid {
+  grid-row: 5;
+}
+
+#release-downloads {
+  grid-row: 6;
 }
 
 .panel.compact {
@@ -1256,8 +1287,8 @@ tbody tr.selected {
   display: grid;
   grid-template-columns: minmax(500px, 1.38fr) minmax(230px, 0.62fr);
   gap: 10px;
-  margin-top: 10px;
   min-height: 0;
+  overflow: hidden;
 }
 
 .subsurface {
@@ -1272,7 +1303,8 @@ tbody tr.selected {
 .release-hot {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  margin-top: 10px;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .release-actions {
@@ -1702,12 +1734,22 @@ tbody tr.selected {
   margin-top: 12px;
 }
 
+.signals-panel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  max-height: 220px;
+  overflow: hidden;
+}
+
 .signal-grid,
 .live-results {
-  overflow: hidden;
+  min-height: 0;
+  overflow: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
 }
 
 .signal-row {
@@ -1784,8 +1826,10 @@ tbody tr.selected {
 
 .live-panel {
   display: grid;
-  grid-template-columns: 340px minmax(0, 1fr);
+  grid-template-columns: 260px minmax(0, 1fr);
   gap: 12px;
+  max-height: 260px;
+  overflow: hidden;
 }
 
 .live-row {
@@ -2116,7 +2160,14 @@ tbody tr.selected {
 
 @media (max-width: 1120px) {
   .app-shell {
+    height: auto;
     grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .main {
+    height: auto;
+    overflow: visible;
   }
 
   .sidebar {
