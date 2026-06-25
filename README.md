@@ -50,6 +50,29 @@ The current MVP focuses on AI Agent, MCP, RAG, and LLMOps repositories.
 | Product opportunities | Tool or product ideas derived from repeated issue patterns |
 | Content angles | Article/video topics backed by real issue evidence |
 | Live panel | Seeded evidence rows by default, with optional GitHub Search API refresh |
+| Hot Repo Pulse mode | Watchlist-based PR and issue radar with local snapshots, history comparison, and daily briefs |
+
+## Hot Repo Pulse Mode
+
+`hot-repo-pulse.html` is the repository-watch mode inside IssueTrending. It keeps
+the IssueTrending brand and adds a focused workflow for popular repositories such
+as `openai/codex`, `google-gemini/gemini-cli`, `aider-ai/aider`, `cline/cline`,
+`RooCodeInc/Roo-Code`, and `opencode-ai/opencode`.
+
+It reads `data/latest.json` and `data/snapshots/index.json`, compares the latest
+snapshot with an older one, and links to generated Markdown briefs:
+
+- `data/latest.md`
+- `data/daily-brief.md`
+
+Create or refresh local snapshot data:
+
+```sh
+node scripts/snapshot.mjs
+```
+
+Defaults live in `hotrepopulse.config.json`. CLI flags remain available for
+one-off overrides, and `GITHUB_TOKEN` can be set for higher GitHub API limits.
 
 ## Product Surface
 
@@ -105,7 +128,13 @@ Open:
 http://127.0.0.1:4173
 ```
 
-No build step is required. The MVP is plain `index.html`, `styles.css`, and `app.js`.
+Hot Repo Pulse mode:
+
+```text
+http://127.0.0.1:4173/hot-repo-pulse.html
+```
+
+No build step is required. The MVP is plain HTML, CSS, and JavaScript.
 
 ## GitHub Pages
 
@@ -128,6 +157,22 @@ Settings -> Pages -> Deploy from branch -> main / root
 ├── index.html
 ├── styles.css
 ├── app.js
+├── hot-repo-pulse.html
+├── hot-repo-pulse.css
+├── hot-repo-pulse.js
+├── hotrepopulse.config.json
+├── scripts/
+│   └── snapshot.mjs
+├── tests/
+│   ├── fixtures/
+│   │   └── github-snapshot-fixture.json
+│   └── snapshot.test.mjs
+├── data/
+│   ├── latest.json
+│   ├── latest.md
+│   ├── daily-brief.md
+│   ├── state.json
+│   └── snapshots/
 ├── docs/
 │   └── readme-assets/
 │       ├── logo.svg

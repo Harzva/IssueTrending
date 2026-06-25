@@ -1,0 +1,3048 @@
+{
+  "schema_version": 1,
+  "last_snapshot_at": "2026-06-25T13:26:19.013Z",
+  "repositories": {
+    "openai/codex": {
+      "stars": 93610,
+      "forks": 13843,
+      "open_workload": 7803,
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli": {
+      "stars": 105547,
+      "forks": 14161,
+      "open_workload": 1344,
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider": {
+      "stars": 46680,
+      "forks": 4646,
+      "open_workload": 1656,
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline": {
+      "stars": 63885,
+      "forks": 6777,
+      "open_workload": 1141,
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code": {
+      "stars": 24272,
+      "forks": 3336,
+      "open_workload": 1036,
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode": {
+      "stars": 13083,
+      "forks": 1494,
+      "open_workload": 158,
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    }
+  },
+  "items": {
+    "openai/codex#11023": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 11023,
+      "score": 3064,
+      "comments": 126,
+      "reactions": 964,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#14593": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 14593,
+      "score": 2263,
+      "comments": 620,
+      "reactions": 296,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#28224": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 28224,
+      "score": 1674,
+      "comments": 82,
+      "reactions": 514,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#28879": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 28879,
+      "score": 1546,
+      "comments": 140,
+      "reactions": 421,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#2847": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 2847,
+      "score": 1428,
+      "comments": 78,
+      "reactions": 410,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#19464": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 19464,
+      "score": 1084,
+      "comments": 132,
+      "reactions": 241,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#13993": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 13993,
+      "score": 843,
+      "comments": 75,
+      "reactions": 204,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#2998": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 2998,
+      "score": 785,
+      "comments": 62,
+      "reactions": 198,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#13041": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 13041,
+      "score": 709,
+      "comments": 73,
+      "reactions": 157,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#14860": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 14860,
+      "score": 603,
+      "comments": 103,
+      "reactions": 91,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#8648": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 8648,
+      "score": 425,
+      "comments": 64,
+      "reactions": 55,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#25749": {
+      "repo": "openai/codex",
+      "kind": "issue",
+      "number": 25749,
+      "score": 379,
+      "comments": 63,
+      "reactions": 55,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#27713": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 27713,
+      "score": 145,
+      "comments": 34,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#13096": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 13096,
+      "score": 144,
+      "comments": 28,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#15583": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 15583,
+      "score": 142,
+      "comments": 12,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#13465": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 13465,
+      "score": 138,
+      "comments": 19,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#28307": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 28307,
+      "score": 137,
+      "comments": 46,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#15226": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 15226,
+      "score": 123,
+      "comments": 18,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#28268": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 28268,
+      "score": 120,
+      "comments": 38,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#28267": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 28267,
+      "score": 99,
+      "comments": 28,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#13177": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 13177,
+      "score": 98,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#28815": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 28815,
+      "score": 86,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#12293": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 12293,
+      "score": 82,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#28265": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 28265,
+      "score": 81,
+      "comments": 12,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#28266": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 28266,
+      "score": 81,
+      "comments": 18,
+      "reactions": 1,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#27249": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 27249,
+      "score": 67,
+      "comments": 1,
+      "reactions": 1,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#28264": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 28264,
+      "score": 56,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "openai/codex#29541": {
+      "repo": "openai/codex",
+      "kind": "pull_request",
+      "number": 29541,
+      "score": 44,
+      "comments": 14,
+      "reactions": 0,
+      "triage_lane": "ignore_no_action",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#22141": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 22141,
+      "score": 1041,
+      "comments": 217,
+      "reactions": 164,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#19532": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 19532,
+      "score": 728,
+      "comments": 127,
+      "reactions": 124,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#26856": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 26856,
+      "score": 678,
+      "comments": 46,
+      "reactions": 169,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#24937": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 24937,
+      "score": 671,
+      "comments": 131,
+      "reactions": 95,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#3132": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 3132,
+      "score": 645,
+      "comments": 45,
+      "reactions": 150,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#16750": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 16750,
+      "score": 478,
+      "comments": 159,
+      "reactions": 5,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#23331": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 23331,
+      "score": 395,
+      "comments": 83,
+      "reactions": 38,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#23316": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 23316,
+      "score": 360,
+      "comments": 80,
+      "reactions": 22,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#12657": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 12657,
+      "score": 359,
+      "comments": 73,
+      "reactions": 27,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#1531": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 1531,
+      "score": 349,
+      "comments": 63,
+      "reactions": 31,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#13190": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 13190,
+      "score": 309,
+      "comments": 73,
+      "reactions": 9,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#16388": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "issue",
+      "number": 16388,
+      "score": 197,
+      "comments": 38,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#21880": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 21880,
+      "score": 136,
+      "comments": 4,
+      "reactions": 2,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#20700": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 20700,
+      "score": 134,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#24758": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 24758,
+      "score": 127,
+      "comments": 3,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#22590": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 22590,
+      "score": 118,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#25378": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 25378,
+      "score": 117,
+      "comments": 6,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#27889": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 27889,
+      "score": 110,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#26529": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 26529,
+      "score": 108,
+      "comments": 4,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#27966": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 27966,
+      "score": 102,
+      "comments": 14,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#23414": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 23414,
+      "score": 102,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#24661": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 24661,
+      "score": 97,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#19591": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 19591,
+      "score": 96,
+      "comments": 2,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#27971": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 27971,
+      "score": 96,
+      "comments": 11,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#26509": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 26509,
+      "score": 87,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#27936": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 27936,
+      "score": 80,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#28089": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 28089,
+      "score": 75,
+      "comments": 12,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#28105": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 28105,
+      "score": 74,
+      "comments": 16,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#28053": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 28053,
+      "score": 69,
+      "comments": 10,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#28112": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 28112,
+      "score": 68,
+      "comments": 4,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "google-gemini/gemini-cli#28015": {
+      "repo": "google-gemini/gemini-cli",
+      "kind": "pull_request",
+      "number": 28015,
+      "score": 63,
+      "comments": 4,
+      "reactions": 1,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#2227": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 2227,
+      "score": 894,
+      "comments": 212,
+      "reactions": 119,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#2525": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 2525,
+      "score": 552,
+      "comments": 26,
+      "reactions": 138,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#3362": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 3362,
+      "score": 374,
+      "comments": 48,
+      "reactions": 58,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#68": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 68,
+      "score": 327,
+      "comments": 36,
+      "reactions": 56,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#3781": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 3781,
+      "score": 312,
+      "comments": 18,
+      "reactions": 67,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#649": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 649,
+      "score": 292,
+      "comments": 39,
+      "reactions": 41,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#3037": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 3037,
+      "score": 222,
+      "comments": 31,
+      "reactions": 22,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#4441": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 4441,
+      "score": 211,
+      "comments": 30,
+      "reactions": 15,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#664": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 664,
+      "score": 183,
+      "comments": 33,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#3196": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 3196,
+      "score": 176,
+      "comments": 27,
+      "reactions": 7,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#3086": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 3086,
+      "score": 161,
+      "comments": 29,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#2371": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 2371,
+      "score": 160,
+      "comments": 26,
+      "reactions": 2,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#1089": {
+      "repo": "aider-ai/aider",
+      "kind": "issue",
+      "number": 1089,
+      "score": 155,
+      "comments": 26,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#2911": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 2911,
+      "score": 142,
+      "comments": 17,
+      "reactions": 7,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#3480": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 3480,
+      "score": 133,
+      "comments": 11,
+      "reactions": 8,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#4590": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 4590,
+      "score": 124,
+      "comments": 16,
+      "reactions": 3,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#1217": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 1217,
+      "score": 123,
+      "comments": 8,
+      "reactions": 3,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#3756": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 3756,
+      "score": 119,
+      "comments": 14,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#4863": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 4863,
+      "score": 114,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#4731": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 4731,
+      "score": 109,
+      "comments": 5,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#1961": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 1961,
+      "score": 107,
+      "comments": 12,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#4791": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 4791,
+      "score": 100,
+      "comments": 1,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#2351": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 2351,
+      "score": 100,
+      "comments": 6,
+      "reactions": 2,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#5122": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 5122,
+      "score": 99,
+      "comments": 8,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#4495": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 4495,
+      "score": 98,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#4726": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 4726,
+      "score": 90,
+      "comments": 4,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#2628": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 2628,
+      "score": 82,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#2174": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 2174,
+      "score": 82,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "aider-ai/aider#3457": {
+      "repo": "aider-ai/aider",
+      "kind": "pull_request",
+      "number": 3457,
+      "score": 82,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#5915": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 5915,
+      "score": 353,
+      "comments": 50,
+      "reactions": 51,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#6398": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 6398,
+      "score": 330,
+      "comments": 70,
+      "reactions": 22,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#4356": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 4356,
+      "score": 325,
+      "comments": 63,
+      "reactions": 29,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#4384": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 4384,
+      "score": 220,
+      "comments": 46,
+      "reactions": 10,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#7262": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 7262,
+      "score": 218,
+      "comments": 38,
+      "reactions": 6,
+      "triage_lane": "ignore_no_action",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#8636": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 8636,
+      "score": 213,
+      "comments": 32,
+      "reactions": 9,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#4389": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 4389,
+      "score": 201,
+      "comments": 23,
+      "reactions": 9,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#6416": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 6416,
+      "score": 171,
+      "comments": 18,
+      "reactions": 12,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#8074": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 8074,
+      "score": 170,
+      "comments": 24,
+      "reactions": 3,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#9788": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 9788,
+      "score": 155,
+      "comments": 16,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#7356": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 7356,
+      "score": 149,
+      "comments": 26,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#10015": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 10015,
+      "score": 138,
+      "comments": 15,
+      "reactions": 4,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#9538": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 9538,
+      "score": 134,
+      "comments": 8,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#10307": {
+      "repo": "cline/cline",
+      "kind": "issue",
+      "number": 10307,
+      "score": 131,
+      "comments": 17,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#9792": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 9792,
+      "score": 130,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#7861": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 7861,
+      "score": 123,
+      "comments": 11,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#11148": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 11148,
+      "score": 118,
+      "comments": 17,
+      "reactions": 2,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#10050": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 10050,
+      "score": 114,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#7113": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 7113,
+      "score": 112,
+      "comments": 8,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#10304": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 10304,
+      "score": 107,
+      "comments": 3,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#10651": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 10651,
+      "score": 105,
+      "comments": 10,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#7272": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 7272,
+      "score": 103,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#9170": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 9170,
+      "score": 101,
+      "comments": 3,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#10764": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 10764,
+      "score": 96,
+      "comments": 7,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#10073": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 10073,
+      "score": 93,
+      "comments": 4,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#10765": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 10765,
+      "score": 92,
+      "comments": 5,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#8125": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 8125,
+      "score": 92,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#6994": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 6994,
+      "score": 92,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#7975": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 7975,
+      "score": 92,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "cline/cline#10762": {
+      "repo": "cline/cline",
+      "kind": "pull_request",
+      "number": 10762,
+      "score": 88,
+      "comments": 3,
+      "reactions": 1,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12330": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 12330,
+      "score": 266,
+      "comments": 83,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#10566": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 10566,
+      "score": 263,
+      "comments": 23,
+      "reactions": 20,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#11071": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 11071,
+      "score": 248,
+      "comments": 65,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#8119": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 8119,
+      "score": 205,
+      "comments": 16,
+      "reactions": 16,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12024": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 12024,
+      "score": 187,
+      "comments": 18,
+      "reactions": 8,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12237": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 12237,
+      "score": 166,
+      "comments": 21,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12079": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 12079,
+      "score": 161,
+      "comments": 15,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#11861": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 11861,
+      "score": 159,
+      "comments": 15,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12292": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 12292,
+      "score": 148,
+      "comments": 17,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#7042": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 7042,
+      "score": 148,
+      "comments": 15,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#8131": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 8131,
+      "score": 138,
+      "comments": 19,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#10630": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 10630,
+      "score": 129,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12301": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 12301,
+      "score": 124,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#11479": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 11479,
+      "score": 119,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#10228": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 10228,
+      "score": 113,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12221": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 12221,
+      "score": 108,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12288": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 12288,
+      "score": 108,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12329": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "issue",
+      "number": 12329,
+      "score": 107,
+      "comments": 15,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#10598": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 10598,
+      "score": 103,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#10758": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 10758,
+      "score": 103,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#10879": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 10879,
+      "score": 98,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#10947": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 10947,
+      "score": 97,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#12181": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 12181,
+      "score": 92,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "RooCodeInc/Roo-Code#10627": {
+      "repo": "RooCodeInc/Roo-Code",
+      "kind": "pull_request",
+      "number": 10627,
+      "score": 87,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#164": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 164,
+      "score": 190,
+      "comments": 17,
+      "reactions": 23,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#265": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 265,
+      "score": 154,
+      "comments": 10,
+      "reactions": 4,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#298": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 298,
+      "score": 147,
+      "comments": 15,
+      "reactions": 9,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#182": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 182,
+      "score": 146,
+      "comments": 10,
+      "reactions": 1,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#315": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 315,
+      "score": 141,
+      "comments": 6,
+      "reactions": 5,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#307": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 307,
+      "score": 139,
+      "comments": 12,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#294": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 294,
+      "score": 136,
+      "comments": 8,
+      "reactions": 2,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#183": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 183,
+      "score": 136,
+      "comments": 11,
+      "reactions": 8,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#176": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 176,
+      "score": 128,
+      "comments": 8,
+      "reactions": 2,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#216": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 216,
+      "score": 127,
+      "comments": 3,
+      "reactions": 8,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#270": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 270,
+      "score": 124,
+      "comments": 12,
+      "reactions": 3,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#89": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 89,
+      "score": 119,
+      "comments": 11,
+      "reactions": 2,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#119": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 119,
+      "score": 118,
+      "comments": 12,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#61": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 61,
+      "score": 117,
+      "comments": 9,
+      "reactions": 3,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#197": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 197,
+      "score": 110,
+      "comments": 8,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#175": {
+      "repo": "opencode-ai/opencode",
+      "kind": "issue",
+      "number": 175,
+      "score": 107,
+      "comments": 8,
+      "reactions": 0,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#98": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 98,
+      "score": 98,
+      "comments": 0,
+      "reactions": 0,
+      "triage_lane": "needs_validation",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#323": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 323,
+      "score": 95,
+      "comments": 2,
+      "reactions": 3,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#110": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 110,
+      "score": 93,
+      "comments": 4,
+      "reactions": 1,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#346": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 346,
+      "score": 92,
+      "comments": 2,
+      "reactions": 2,
+      "triage_lane": "content_opportunity",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#348": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 348,
+      "score": 88,
+      "comments": 3,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#301": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 301,
+      "score": 88,
+      "comments": 3,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#227": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 227,
+      "score": 86,
+      "comments": 2,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#308": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 308,
+      "score": 86,
+      "comments": 2,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    },
+    "opencode-ai/opencode#327": {
+      "repo": "opencode-ai/opencode",
+      "kind": "pull_request",
+      "number": 327,
+      "score": 84,
+      "comments": 1,
+      "reactions": 0,
+      "triage_lane": "needs_follow_up",
+      "last_seen_at": "2026-06-25T13:26:19.013Z"
+    }
+  },
+  "memory_bias": {
+    "schema_version": 1,
+    "last_updated_at": "2026-06-25T13:26:19.013Z",
+    "repositories": {
+      "openai/codex": {
+        "seen": 92,
+        "useful": 70,
+        "weight": 130.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "google-gemini/gemini-cli": {
+        "seen": 100,
+        "useful": 76,
+        "weight": 141.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "aider-ai/aider": {
+        "seen": 98,
+        "useful": 84,
+        "weight": 151.9,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "cline/cline": {
+        "seen": 100,
+        "useful": 98,
+        "weight": 172.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "RooCodeInc/Roo-Code": {
+        "seen": 80,
+        "useful": 78,
+        "weight": 137.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "opencode-ai/opencode": {
+        "seen": 84,
+        "useful": 68,
+        "weight": 124.6,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "omnigent-ai/omnigent": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "TestSprite/testsprite-cli": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "eli-labz/Third-Eye": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "sums001/Windows-Copilot-API": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "raiyanyahya/recall": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "buynao/aipath": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "gykim80/perfectpixel-studio": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "itsinseong/value-for-fable": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Karovia/fullstack-ai-agent-roadmap": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "dwebagents/AgentPipe": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Happy-Chen-CH/Educational_RAG_System": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "databufflabs/databuff": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      }
+    },
+    "topics": {
+      "validation-risk": {
+        "seen": 126,
+        "useful": 118,
+        "weight": 209.3,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "security-review": {
+        "seen": 60,
+        "useful": 58,
+        "weight": 102.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "runtime-risk": {
+        "seen": 124,
+        "useful": 118,
+        "weight": 208.6,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "product-signal": {
+        "seen": 100,
+        "useful": 86,
+        "weight": 155.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "review-drag": {
+        "seen": 296,
+        "useful": 234,
+        "weight": 431.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "agent-framework": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "agent-governance": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "agent-orchestration": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "agents": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "ai": {
+        "seen": 40,
+        "useful": 20,
+        "weight": 42,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "ai-agent": {
+        "seen": 12,
+        "useful": 8,
+        "weight": 15.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "ai-agents": {
+        "seen": 14,
+        "useful": 12,
+        "weight": 21.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "claude-code": {
+        "seen": 12,
+        "useful": 8,
+        "weight": 15.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "codex": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "coding-agents": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "developer-tools": {
+        "seen": 8,
+        "useful": 8,
+        "weight": 14,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "llm": {
+        "seen": 16,
+        "useful": 12,
+        "weight": 22.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "ml": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "multi-agent": {
+        "seen": 6,
+        "useful": 4,
+        "weight": 7.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "python": {
+        "seen": 12,
+        "useful": 8,
+        "weight": 15.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "sandbox": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "cli": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "e2e-testing": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "playwright": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "qa": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "test-automation": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "testing": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "geospatial": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "maven-smart-system": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "palantir": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "api": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "copilot": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "microsoft-copilot": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "openai": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "anthropic": {
+        "seen": 8,
+        "useful": 4,
+        "weight": 8.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "claude": {
+        "seen": 10,
+        "useful": 4,
+        "weight": 9.1,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "claude-code-plugin": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "claude-plugin": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "context": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "local-first": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "memory": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "offline": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "privacy": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "productivity": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "summarization": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "textrank": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "machine-learning": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "game-development": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "golang": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "pixel-art": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "sprite": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "spritesheet": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "wails": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "agentic": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "fable": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "fable5": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "harness": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "opus": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "prompt-engineering": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "sonnet": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "chinese": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "fastapi": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "fullstack": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "javascript": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "langgraph": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "learning-roadmap": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "mcp": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "obsidian": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "react": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "tutorial": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "agent-friendly": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "agentic-ai": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "banana-pudding": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "bananas": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "banancial-markets": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "bizops": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "bounty-rewards": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "crypto": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "cryptocurrency": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "ethereum": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "finance": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "fintech": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "good-first-issue": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "important": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "recipes": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "self-improvement": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "solidity": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "specops": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "milvus": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "mysql": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "rag": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "redis": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "apm": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "application-monitoring": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "observabiltiy": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "open-source": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "opentelemetry": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "root-cause-analysis": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "tracing": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      }
+    },
+    "labels": {
+      "enhancement": {
+        "seen": 46,
+        "useful": 46,
+        "weight": 80.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "app": {
+        "seen": 14,
+        "useful": 14,
+        "weight": 24.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "bug": {
+        "seen": 56,
+        "useful": 56,
+        "weight": 98,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "rate-limits": {
+        "seen": 8,
+        "useful": 8,
+        "weight": 14,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "CLI": {
+        "seen": 10,
+        "useful": 8,
+        "weight": 14.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "performance": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "sandbox": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "context": {
+        "seen": 10,
+        "useful": 10,
+        "weight": 17.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "windows-os": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "User Request": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Feature": {
+        "seen": 6,
+        "useful": 6,
+        "weight": 10.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "do not merge": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "prototype": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "priority/p2": {
+        "seen": 38,
+        "useful": 32,
+        "weight": 58.1,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "area/agent": {
+        "seen": 22,
+        "useful": 22,
+        "weight": 38.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "status/bot-triaged": {
+        "seen": 38,
+        "useful": 38,
+        "weight": 66.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "kind/bug": {
+        "seen": 24,
+        "useful": 24,
+        "weight": 42,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "priority/p1": {
+        "seen": 26,
+        "useful": 26,
+        "weight": 45.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "area/enterprise": {
+        "seen": 8,
+        "useful": 8,
+        "weight": 14,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "kind/customer-issue": {
+        "seen": 8,
+        "useful": 8,
+        "weight": 14,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "🔒 maintainer only": {
+        "seen": 26,
+        "useful": 26,
+        "weight": 45.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "area/platform": {
+        "seen": 14,
+        "useful": 14,
+        "weight": 24.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Stale": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "kind/enhancement": {
+        "seen": 12,
+        "useful": 12,
+        "weight": 21,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "area/core": {
+        "seen": 16,
+        "useful": 14,
+        "weight": 25.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "area/extensions": {
+        "seen": 12,
+        "useful": 8,
+        "weight": 15.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "status/need-retesting": {
+        "seen": 8,
+        "useful": 8,
+        "weight": 14,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "effort/large": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "priority/p3": {
+        "seen": 8,
+        "useful": 8,
+        "weight": 14,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "size/l": {
+        "seen": 22,
+        "useful": 12,
+        "weight": 24.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "size/s": {
+        "seen": 6,
+        "useful": 4,
+        "weight": 7.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "help wanted": {
+        "seen": 16,
+        "useful": 16,
+        "weight": 28,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "size/m": {
+        "seen": 20,
+        "useful": 14,
+        "weight": 26.6,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "status/need-issue": {
+        "seen": 26,
+        "useful": 12,
+        "weight": 25.9,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "status/pr-nudge-sent": {
+        "seen": 12,
+        "useful": 10,
+        "weight": 18.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "size/xl": {
+        "seen": 14,
+        "useful": 6,
+        "weight": 13.3,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "size/xs": {
+        "seen": 4,
+        "useful": 0,
+        "weight": 1.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "priority": {
+        "seen": 22,
+        "useful": 20,
+        "weight": 35.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "fixed": {
+        "seen": 6,
+        "useful": 6,
+        "weight": 10.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Model Quality": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "VS Code": {
+        "seen": 30,
+        "useful": 30,
+        "weight": 52.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Bot Responded": {
+        "seen": 30,
+        "useful": 30,
+        "weight": 52.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Needs User Input": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "JetBrains": {
+        "seen": 6,
+        "useful": 6,
+        "weight": 10.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Linear": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Regression": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "size:XXL": {
+        "seen": 14,
+        "useful": 14,
+        "weight": 24.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Bot Reviewed": {
+        "seen": 30,
+        "useful": 30,
+        "weight": 52.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "size:L": {
+        "seen": 22,
+        "useful": 22,
+        "weight": 38.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "size:XS": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Enhancement": {
+        "seen": 24,
+        "useful": 24,
+        "weight": 42,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Improvement": {
+        "seen": 10,
+        "useful": 10,
+        "weight": 17.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Issue/PR - Triage": {
+        "seen": 10,
+        "useful": 8,
+        "weight": 14.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "size:M": {
+        "seen": 8,
+        "useful": 8,
+        "weight": 14,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "PR - Needs Preliminary Review": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "Documentation": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "extension": {
+        "seen": 2,
+        "useful": 2,
+        "weight": 3.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "connectivity": {
+        "seen": 2,
+        "useful": 2,
+        "weight": 3.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "agent": {
+        "seen": 2,
+        "useful": 2,
+        "weight": 3.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "auth": {
+        "seen": 2,
+        "useful": 2,
+        "weight": 3.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "codex": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "rust": {
+        "seen": 2,
+        "useful": 0,
+        "weight": 0.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "status/manual-triage": {
+        "seen": 2,
+        "useful": 2,
+        "weight": 3.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "workstream-rollup": {
+        "seen": 2,
+        "useful": 2,
+        "weight": 3.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "aiq/agent": {
+        "seen": 2,
+        "useful": 2,
+        "weight": 3.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "area/documentation": {
+        "seen": 2,
+        "useful": 2,
+        "weight": 3.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "area/non-interactive": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "question": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "stale": {
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      "P3": {
+        "seen": 2,
+        "useful": 2,
+        "weight": 3.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      }
+    },
+    "top_repositories": [
+      {
+        "key": "cline/cline",
+        "seen": 100,
+        "useful": 98,
+        "weight": 172.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "aider-ai/aider",
+        "seen": 98,
+        "useful": 84,
+        "weight": 151.9,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "google-gemini/gemini-cli",
+        "seen": 100,
+        "useful": 76,
+        "weight": 141.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "RooCodeInc/Roo-Code",
+        "seen": 80,
+        "useful": 78,
+        "weight": 137.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "openai/codex",
+        "seen": 92,
+        "useful": 70,
+        "weight": 130.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "opencode-ai/opencode",
+        "seen": 84,
+        "useful": 68,
+        "weight": 124.6,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "eli-labz/Third-Eye",
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "omnigent-ai/omnigent",
+        "seen": 4,
+        "useful": 4,
+        "weight": 7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      }
+    ],
+    "top_topics": [
+      {
+        "key": "review-drag",
+        "seen": 296,
+        "useful": 234,
+        "weight": 431.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "validation-risk",
+        "seen": 126,
+        "useful": 118,
+        "weight": 209.3,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "runtime-risk",
+        "seen": 124,
+        "useful": 118,
+        "weight": 208.6,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "product-signal",
+        "seen": 100,
+        "useful": 86,
+        "weight": 155.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "security-review",
+        "seen": 60,
+        "useful": 58,
+        "weight": 102.2,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "ai",
+        "seen": 40,
+        "useful": 20,
+        "weight": 42,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "llm",
+        "seen": 16,
+        "useful": 12,
+        "weight": 22.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "ai-agents",
+        "seen": 14,
+        "useful": 12,
+        "weight": 21.7,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "ai-agent",
+        "seen": 12,
+        "useful": 8,
+        "weight": 15.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "claude-code",
+        "seen": 12,
+        "useful": 8,
+        "weight": 15.4,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      }
+    ],
+    "top_labels": [
+      {
+        "key": "bug",
+        "seen": 56,
+        "useful": 56,
+        "weight": 98,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "enhancement",
+        "seen": 46,
+        "useful": 46,
+        "weight": 80.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "status/bot-triaged",
+        "seen": 38,
+        "useful": 38,
+        "weight": 66.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "priority/p2",
+        "seen": 38,
+        "useful": 32,
+        "weight": 58.1,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "Bot Responded",
+        "seen": 30,
+        "useful": 30,
+        "weight": 52.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "Bot Reviewed",
+        "seen": 30,
+        "useful": 30,
+        "weight": 52.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "VS Code",
+        "seen": 30,
+        "useful": 30,
+        "weight": 52.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "🔒 maintainer only",
+        "seen": 26,
+        "useful": 26,
+        "weight": 45.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "priority/p1",
+        "seen": 26,
+        "useful": 26,
+        "weight": 45.5,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      },
+      {
+        "key": "Enhancement",
+        "seen": 24,
+        "useful": 24,
+        "weight": 42,
+        "last_seen_at": "2026-06-25T13:26:19.013Z"
+      }
+    ]
+  }
+}

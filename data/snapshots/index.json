@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "latest_generated_at": "2026-06-25T13:26:19.013Z",
+  "snapshots": [
+    {
+      "generated_at": "2026-06-25T13:26:19.013Z",
+      "file": "snapshots/2026-06-25T132619-013Z.json",
+      "repositories": 6,
+      "events": 167,
+      "pull_requests": 95,
+      "issues": 72,
+      "trend_candidates": 12,
+      "new_events": 0,
+      "heated_events": 0,
+      "cooled_events": 0
+    },
+    {
+      "generated_at": "2026-06-25T13:25:44.459Z",
+      "file": "snapshots/2026-06-25T132544-459Z.json",
+      "repositories": 6,
+      "events": 167,
+      "pull_requests": 95,
+      "issues": 72,
+      "trend_candidates": 12,
+      "new_events": 57,
+      "heated_events": 10,
+      "cooled_events": 0
+    }
+  ]
+}

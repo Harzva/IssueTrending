@@ -1,0 +1,18 @@
+{
+  "watch_repositories": [
+    "openai/codex",
+    "google-gemini/gemini-cli",
+    "aider-ai/aider",
+    "cline/cline",
+    "RooCodeInc/Roo-Code",
+    "opencode-ai/opencode"
+  ],
+  "trend": {
+    "query": "topic:ai",
+    "window_days": 14,
+    "min_stars": 100,
+    "limit": 12
+  },
+  "items_per_repo": 12,
+  "token_env": "GITHUB_TOKEN"
+}
