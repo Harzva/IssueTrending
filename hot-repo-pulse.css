@@ -470,6 +470,53 @@ select:focus {
   text-transform: uppercase;
 }
 
+.topic-switcher {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.topic-card {
+  min-width: 0;
+  min-height: 72px;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow);
+  display: grid;
+  align-content: center;
+  gap: 4px;
+}
+
+.topic-card:hover,
+.topic-card.active {
+  border-color: rgba(40, 106, 168, 0.42);
+  background: var(--blue-soft);
+}
+
+.topic-card span {
+  color: var(--quiet);
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.topic-card strong {
+  min-width: 0;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.topic-card small {
+  min-width: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
 .overview {
   display: grid;
   grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
@@ -1182,8 +1229,13 @@ tbody tr:hover {
   }
 
   .run-strip,
+  .topic-switcher,
   .rail {
     grid-template-columns: 1fr;
+  }
+
+  .topic-card {
+    min-height: 64px;
   }
 
   .metric-grid,

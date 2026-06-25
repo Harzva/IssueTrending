@@ -52,6 +52,14 @@ The current MVP focuses on AI Agent, MCP, RAG, and LLMOps repositories.
 | Live panel | Seeded evidence rows by default, with optional GitHub Search API refresh |
 | Hot Repo Pulse mode | Watchlist-based PR and issue radar with local snapshots, history comparison, and daily briefs |
 
+## Single-Site Topics
+
+IssueTrending uses one site entry and multiple intelligence topics:
+
+- `Issue Trend Radar` for cross-repository pain clusters, opportunities, and content angles.
+- `Hot Repo Pulse` for watchlist-based PR and issue monitoring.
+- `Daily Brief` for publishable daily summaries generated from saved snapshots.
+
 ## Hot Repo Pulse Mode
 
 `hot-repo-pulse.html` is the repository-watch mode inside IssueTrending. It keeps
